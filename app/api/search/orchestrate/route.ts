@@ -299,7 +299,7 @@ export async function POST(
       console.log(
         `\n[Search Orchestrator] [Job ${i + 1}/${searchQueue.length} | Round ${round}] Platform: [${platform.toUpperCase()}]`
       );
-      console.log(`[Search Orchestrator]   Query: "${query}"`);
+      console.log(`[Search Orchestrator]   Query: ${query}`);
       console.log(`[Search Orchestrator]   Audience: "${specificIcpName}"`);
 
       try {
@@ -667,21 +667,55 @@ export async function POST(
 }
 
 /**
+ * Normalizes double quotes and balances any unpaired quotes.
+ */
+function balanceQuotes(str: string): string {
+  // Convert curved/smart quotes to standard double and single quotes
+  let s = str.replace(/[“”]/g, '"').replace(/[‘’]/g, "'");
+
+  // Collapse consecutive double quotes like `""` into a single `"`
+  s = s.replace(/"+/g, '"');
+
+  // Count total double quotes
+  const quoteCount = (s.match(/"/g) || []).length;
+  if (quoteCount % 2 !== 0) {
+    // If odd number of quotes, fix the dangling/unclosed quote
+    if (s.endsWith('"') && quoteCount > 1) {
+      // e.g. `"startup banking" referrals"` -> remove trailing stray quote
+      s = s.slice(0, -1).trim();
+    } else if (s.startsWith('"') && quoteCount === 1) {
+      // e.g. `"startup banking referrals` -> remove leading unclosed quote
+      s = s.slice(1).trim();
+    } else {
+      // Stray unclosed quote inside string, remove quotes to avoid API syntax errors
+      s = s.replace(/"/g, "");
+    }
+  }
+
+  return s;
+}
+
+/**
  * Simplifies queries with advanced field operators for search engines that only accept simple keyword strings.
  */
 function cleanQueryForPlatform(rawQuery: string, platform: PlatformType): string {
   let q = rawQuery.trim();
 
-  // Strip excessive surrounding double-quotes like `""keyword""`
-  q = q.replace(/^"+|"+$/g, "");
+  // Normalize quotes and fix unbalanced/stray quotes without stripping valid phrase quotes
+  q = balanceQuotes(q);
+
+  // For Hacker News (Algolia), quotes in search queries are not supported and break matching
+  if (platform === "hackernews") {
+    q = q.replace(/"/g, " ");
+  }
 
   // Strip complex boolean parentheses and field selectors for platforms that don't support them
-  if (platform === "reddit" || platform === "hackernews" || platform === "linkedin") {
+  if (platform === "reddit" || platform === "hackernews" || platform === "linkedin" || platform === "x") {
     q = q.replace(/title:|selftext:|-is:retweet|lang:\w+|in:readme|in:name/gi, " ");
     q = q.replace(/[()]/g, " ").replace(/\s+OR\s+/gi, " ");
-    q = q.replace(/"+/g, '"');
   }
 
   // Clean excessive double spaces
   return q.replace(/\s+/g, " ").trim();
 }
+
