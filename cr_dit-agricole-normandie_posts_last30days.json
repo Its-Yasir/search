@@ -1,0 +1,1780 @@
+{
+  "metadata": {
+    "query": "https://fr.linkedin.com/company/cr%C3%A9dit-agricole-normandie",
+    "extracted_identifier": "crédit-agricole-normandie",
+    "company_profile": {
+      "object": "CompanyProfile",
+      "id": "10017660",
+      "entity_urn": "urn:li:fsd_company:10017660",
+      "name": "Crédit Agricole Normandie",
+      "description": "Bienvenue sur la page Linkedin du Crédit Agricole Normandie.\n\nRejoindre le groupe Crédit Agricole, c'est intégrer un Groupe international présent dans 47 pays, fort de 141 000 collaborateurs au service de 51 millions de clients.\nLe Crédit Agricole est l'un des tout premiers acteurs bancaires en Europe et le leader de la banque universelle de proximité en France : banque d'1 particulier sur 3, d'1 entreprise sur 3 et de 9 agriculteurs sur 10.\n\nRejoindre le Crédit Agricole Normandie, c'est intégrer le premier financeur de l'économie régionale, et le seul établissement bancaire de plein exercice qui décide et agit sur l'ensemble de son territoire du Calvados, de la Manche et de l'Orne.\nEntreprise coopérative, le Crédit Agricole Normandie s'appuie sur des valeurs fondamentales que sont la proximité, la responsabilité et la solidarité. Ce modèle conjugue au quotidien performance économique et responsabilité sociétale.\n\n2 100 collaborateurs travaillent au Crédit Agricole Normandie, au service de nos 757 000 clients, dans les réseaux commerciaux dont le maillage d'agences est inégalé, et dans les fonctions support du Siège. \nNous rejoindre, c'est aussi vous ouvrir des perspectives de carrière riches et diversifiées.\nNous vous invitons à consulter toutes nos offres et à vous renseigner sur nos métiers en suivant le lien suivant : https://recrutement.ca-normandie.fr\n\nRejoignez nous !",
+      "public_identifier": "crédit-agricole-normandie",
+      "profile_url": "https://www.linkedin.com/company/cr%C3%A9dit-agricole-normandie/",
+      "hashtags": [
+        {
+          "title": "#assurance"
+        },
+        {
+          "title": "#banque"
+        },
+        {
+          "title": "#patrimoniales"
+        }
+      ],
+      "viewer_permissions": {
+        "canCreateBroadcast": false,
+        "canReadContentSuggestions": false,
+        "canSeeProducts": false,
+        "canUpdateOrganizationProfile": false,
+        "canSponsorShare": false,
+        "canEditPendingDirectSponsoredContentPosters": false,
+        "canReadAdminFeedFollowingPill": false,
+        "canUntagFromMention": false,
+        "canReadOrganizationActivity": false,
+        "canManageCareerPages": false,
+        "canAssociateHashtag": false,
+        "canDeleteShare": false,
+        "canInviteMemberToFollow": false,
+        "canEditPipelineBuilderAdministrators": false,
+        "canReadBroadcastAnalytics": false,
+        "canManageMessagingAccess": false,
+        "canMembersInviteToFollow": false,
+        "canReadPipelineBuilderAdminPage": false,
+        "canDeactivateOrganization": false,
+        "canCreateOrganicShare": false,
+        "canNotifyEmployeesOfShare": false,
+        "canEditDarkShare": false,
+        "canEnableCommentsShare": false,
+        "canReadOrganizationLeadsAnalytics": false,
+        "canCreateJobPosting": false,
+        "canDeleteDarkShare": false,
+        "canEditLeadGenerationFormManagers": false,
+        "canReadMessages": false,
+        "canReadOrganizationTalentBrandAnalytics": false,
+        "canEditDirectSponsoredContentPosters": false,
+        "canReadOrganizationNewsletterAnalytics": false,
+        "canReadAdminDashboard": false,
+        "canPinShare": false,
+        "canCreateLinkedInPagesProductFeedBack": false,
+        "canReadPipelineBuilderAdministrators": false,
+        "canReadEvents": false,
+        "canEditEvents": false,
+        "canManageOrganizationalPageFollow": false,
+        "canCreateComment": false,
+        "canReadOrganizationUpdateAnalytics": false,
+        "canRequestAdminAccess": true,
+        "canEditAdministrators": false,
+        "canCreateDarkShare": false,
+        "canEmployeesInviteToFollow": false,
+        "canSeeEmployeeExperienceAsMember": false,
+        "canReadAdministrators": false,
+        "canExportLeads": false,
+        "canReadDirectSponsoredContentPosters": false,
+        "canCreateShowcase": false,
+        "canManageEmployeeExperienceSettings": false,
+        "canReadLeadGenerationFormManagers": false,
+        "canReadOrganizationVisitorAnalytics": false,
+        "canEditCurators": false,
+        "canEditProducts": false,
+        "canManageVerifiedEmailDomains": false,
+        "canReadPendingAdministrators": false,
+        "canReadPendingDirectSponsoredContentPosters": false,
+        "canEditPipelineBuilderAdminPage": false,
+        "canManageServicesPage": false,
+        "canReadTermsAndAgreements": false,
+        "canReadOrganizationFollowerAnalytics": false,
+        "canManageOrganizationCompetitors": false,
+        "canSendMessages": false,
+        "canCreateReaction": false,
+        "canDisableCommentsShare": false,
+        "canEditPendingAdministrators": false,
+        "canNotifyEmployees": false,
+        "canReadOrganizationPipelineBuilderAnalytics": false,
+        "canSeeOrganizationAdministrativePage": false
+      },
+      "followers_count": 14069,
+      "is_following": false,
+      "is_employee": false,
+      "organization_type": null,
+      "claimed": true,
+      "locations": [
+        {
+          "is_headquarter": true,
+          "city": "CAEN",
+          "country": "FR",
+          "street": [
+            "15 esplanade Brillaud-de-Laujardière",
+            "CS 25014"
+          ],
+          "postalCode": "14050"
+        }
+      ],
+      "messaging": {
+        "is_enabled": true,
+        "entity_urn": "urn:li:fsd_pageMailbox:2502325",
+        "id": "2502325"
+      },
+      "activities": [
+        "Banque",
+        "Assurance",
+        "Immobilier",
+        "Financement",
+        "Banque privée",
+        "Entreprises",
+        "Particuliers",
+        "Professionnels",
+        "Agriculteurs"
+      ],
+      "website": "http://www.ca-normandie.fr/",
+      "foundation_date": "01/01/2005",
+      "employee_count": 1505,
+      "employee_count_range": {
+        "from": 1001,
+        "to": 5000
+      },
+      "industry": [
+        "Banking"
+      ],
+      "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQEYw4X1XTizyQ/company-logo_100_100/B4EZretkWQHgAQ-/0/1764673079265/crdit_agricole_normandie_logo?e=1790812800&v=beta&t=OXDqx-PP0tRqt7XPLnmXbAKvJq5vh0_7kCvB2u7_WUc",
+      "logo_large": "https://media.licdn.com/dms/image/v2/D4E0BAQEYw4X1XTizyQ/company-logo_200_200/B4EZretkWQHgAI-/0/1764673079265/crdit_agricole_normandie_logo?e=1790812800&v=beta&t=p5cZzLhrA1lpxusLP_jN-9DNfZ1G4Fhbr84v4IQdW0g"
+    },
+    "target_id_used": "10017660",
+    "fetched_at": "2026-09-09T12:35:00.107Z",
+    "filter_days": 30,
+    "cutoff_date": "2026-08-10T12:34:58.406Z",
+    "total_pages_fetched": 1,
+    "total_posts_retrieved": 20,
+    "matching_posts_count": 2
+  },
+  "posts": [
+    {
+      "object": "Post",
+      "provider": "LINKEDIN",
+      "social_id": "urn:li:activity:7499109879572230144",
+      "share_url": "https://www.linkedin.com/posts/cr%C3%A9dit-agricole-normandie_prendre-soin-de-la-sant%C3%A9-des-collaborateurs-activity-7499109879572230144-gN8P?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+      "date": "1w",
+      "comment_counter": 0,
+      "impressions_counter": 0,
+      "reaction_counter": 51,
+      "repost_counter": 1,
+      "permissions": {
+        "can_post_comments": true,
+        "can_react": true,
+        "can_share": true
+      },
+      "text": "Prendre soin de la santé des collaborateurs, c’est aussi agir en prévention.\n \nLe Crédit Agricole Normandie poursuit son engagement en faveur de la prévention avec des actions concrètes menées tout au long de l’année.\n \nCette année, plus de 100 collaborateurs ont bénéficié d’un bilan de prévention consacré au dépistage du diabète, du cholestérol et de l’hypertension artérielle, grâce à un dispositif financé par CAAPE. Une occasion d’échanger avec un professionnel de santé, de mieux connaître ses facteurs de risque, et de repartir avec des conseils personnalisés et applicables sur le lieu de travail.\n\nEn parallèle, une campagne dédiée à la santé auditive, menée avec l’association JNA, a permis à plus de 500 collaborateurs de réaliser un test de dépistage en ligne et de mieux évaluer leur audition.\n \nCes initiatives illustrent une conviction forte : la prévention est un levier essentiel pour préserver la santé et le bien-être de nos collaborateurs, parce qu’une entreprise responsable est aussi une entreprise qui accompagne chacun dans la préservation de sa santé.\n\nCes actions de prévention continueront sur la fin d'année à l'occasion d'Octobre rose et Movember.",
+      "mentions": [],
+      "attachments": [
+        {
+          "id": "D5622AQFX8OVlOAbLwQ",
+          "sticker": false,
+          "size": {
+            "height": 1066,
+            "width": 800
+          },
+          "unavailable": false,
+          "type": "img",
+          "url": "https://media.licdn.com/dms/image/v2/D5622AQFX8OVlOAbLwQ/feedshare-shrink_800/B56aBIwskBHMAc-/0/1787927120851?e=1790812800&v=beta&t=JOeoJH-551u97_xLlFcPdX7Lt_tN1dU14rHlg47jAso"
+        }
+      ],
+      "author": {
+        "public_identifier": "cr%C3%A9dit-agricole-normandie",
+        "id": "10017660",
+        "name": "Crédit Agricole Normandie",
+        "is_company": true,
+        "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E0BAQEYw4X1XTizyQ/company-logo_200_200/B4EZretkWQHgAI-/0/1764673079265/crdit_agricole_normandie_logo?e=1790812800&v=beta&t=p5cZzLhrA1lpxusLP_jN-9DNfZ1G4Fhbr84v4IQdW0g"
+      },
+      "id": "7499109879572230144",
+      "is_repost": false,
+      "parsed_datetime": "2026-08-28T14:25:22.014Z"
+    },
+    {
+      "object": "Post",
+      "provider": "LINKEDIN",
+      "social_id": "urn:li:ugcPost:7495402591959416832",
+      "share_url": "https://www.linkedin.com/posts/village-by-ca-normandie_rejoignez-le-village-by-ca-normandie-ugcPost-7495402591959416832-Dg0a?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+      "date": "3w",
+      "comment_counter": 0,
+      "impressions_counter": 0,
+      "reaction_counter": 53,
+      "repost_counter": 13,
+      "permissions": {
+        "can_post_comments": true,
+        "can_react": true,
+        "can_share": true
+      },
+      "text": "🚀 Rejoignez le Village by CA Normandie !\n\nNotre nouvel appel à candidatures est officiellement ouvert jusqu'au 13 septembre 2026.\nVous avez un projet innovant en phase d'accélération ? C'est peut-être le moment de franchir une nouvelle étape.\n\nAu Village by CA Normandie, vous bénéficiez de :\n🤝 Un accompagnement personnalisé pendant 2 ans\n🌐 Un réseau de partenaires, d'experts et de grandes entreprises\n💼 Des opportunités de business et de collaboration\n📈 Un accompagnement pour structurer et accélérer votre développement\n📍Un écosystème d'innovation implanté au MoHo à Caen\n\nComment candidater ?\nEnvoyez votre dossier à levillagebycanormandie@ca-normandie.fr avec :\n ✔️ Le nom de votre société\n ✔️ Le lien de votre site internet (si existant)\n ✔️ Le nom et prénom de la personne référente\n ✔️ Une présentation de votre activité\n ✔️ Votre deck de présentation\n ✔️ Votre business plan\nNotre équipe vous recontactera rapidement afin d'échanger sur votre projet et répondre à vos questions.\n\n📅 Candidatez avant le 13 septembre 2026.\nNous avons hâte de découvrir votre projet !\n\nCéline VINCENT ; Anaëlle Tudoce ; Sophie Hochet",
+      "mentions": [
+        {
+          "url": "https://www.linkedin.com/company/moho-nation/",
+          "length": 4,
+          "start": 564
+        },
+        {
+          "url": "https://www.linkedin.com/in/ACoAAC67ohUB4rc69oITV6NvA5hTB404zZAYjys",
+          "length": 14,
+          "start": 1076
+        },
+        {
+          "url": "https://www.linkedin.com/in/ACoAADKEhKcBe484beQ3eQqEfip62VnACbP7mmA",
+          "length": 14,
+          "start": 1093
+        },
+        {
+          "url": "https://www.linkedin.com/in/ACoAACLj80UB8JpiKygC7dKHcF3m9ZWVJrqRIk8",
+          "length": 13,
+          "start": 1110
+        }
+      ],
+      "attachments": [
+        {
+          "id": "D4E22AQFjVtZsVk6ykA",
+          "sticker": false,
+          "size": {
+            "height": 600,
+            "width": 480
+          },
+          "unavailable": false,
+          "type": "img",
+          "url": "https://media.licdn.com/dms/image/v2/D4E22AQFjVtZsVk6ykA/feedshare-shrink_480/B4EaAUE8BkJEAg-/0/1787043234168?e=1790812800&v=beta&t=rhk7WR1GvvvHA4_XVHlgz9ZngLkObzpMA98A0zfIvkA"
+        },
+        {
+          "id": "D4E22AQHotFgw7-1J1g",
+          "sticker": false,
+          "size": {
+            "height": 600,
+            "width": 480
+          },
+          "unavailable": false,
+          "type": "img",
+          "url": "https://media.licdn.com/dms/image/v2/D4E22AQHotFgw7-1J1g/feedshare-shrink_480/B4EaAUE70tHEAg-/0/1787043233356?e=1790812800&v=beta&t=XuMTEo6zW1kdUhGyc4FQTy7yi-NYkDoRqlEVCphwiv0"
+        },
+        {
+          "id": "D4E22AQEjGxl5IZVldw",
+          "sticker": false,
+          "size": {
+            "height": 600,
+            "width": 480
+          },
+          "unavailable": false,
+          "type": "img",
+          "url": "https://media.licdn.com/dms/image/v2/D4E22AQEjGxl5IZVldw/feedshare-shrink_480/B4EaAUE8CZKoAg-/0/1787043234248?e=1790812800&v=beta&t=TbPIyrmaJcqoFlC_szAvj8zDrfq7KRYqDZuYfOFZGAg"
+        },
+        {
+          "id": "D4E22AQHmnvo9bJgO5g",
+          "sticker": false,
+          "size": {
+            "height": 600,
+            "width": 480
+          },
+          "unavailable": false,
+          "type": "img",
+          "url": "https://media.licdn.com/dms/image/v2/D4E22AQHmnvo9bJgO5g/feedshare-shrink_480/B4EaAUE8A9IgAg-/0/1787043234156?e=1790812800&v=beta&t=dLWGqCz63zuAMNz2SE84XSvc_t4ABC90FJx4_e5Xf_k"
+        },
+        {
+          "id": "D4E22AQESlqDILjMKQw",
+          "sticker": false,
+          "size": {
+            "height": 600,
+            "width": 480
+          },
+          "unavailable": false,
+          "type": "img",
+          "url": "https://media.licdn.com/dms/image/v2/D4E22AQESlqDILjMKQw/feedshare-shrink_480/B4EaAUE70lIgAg-/0/1787043233322?e=1790812800&v=beta&t=cYOf-AU5QEVjZ5T3ST5fKZu1lZxcFNXLzxeSwUpSRHc"
+        }
+      ],
+      "author": {
+        "public_identifier": "village-by-ca-normandie",
+        "id": "101863815",
+        "name": "Le Village by CA Normandie",
+        "is_company": true,
+        "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E0BAQFN5jMxcqGn0w/company-logo_200_200/company-logo_200_200/0/1730379816764/village_by_ca_normandie_logo?e=1790812800&v=beta&t=pTH0-KtlKfgvTxxoz-IthjJkTiPXJGMQiUupnPRygPg"
+      },
+      "id": "7495402591959416832",
+      "is_repost": true,
+      "repost_id": "7495489906341867521",
+      "parsed_datetime": "2026-08-18T08:53:55.769Z",
+      "repost_parsed_datetime": "2026-08-18T14:40:53.140Z",
+      "reposted_by": {
+        "public_identifier": "cr%C3%A9dit-agricole-normandie",
+        "id": "10017660",
+        "name": "Crédit Agricole Normandie",
+        "is_company": true
+      }
+    }
+  ],
+  "raw_api_responses": [
+    {
+      "object": "PostList",
+      "items": [
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:activity:7499109879572230144",
+          "share_url": "https://www.linkedin.com/posts/cr%C3%A9dit-agricole-normandie_prendre-soin-de-la-sant%C3%A9-des-collaborateurs-activity-7499109879572230144-gN8P?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "1w",
+          "comment_counter": 0,
+          "impressions_counter": 0,
+          "reaction_counter": 51,
+          "repost_counter": 1,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "Prendre soin de la santé des collaborateurs, c’est aussi agir en prévention.\n \nLe Crédit Agricole Normandie poursuit son engagement en faveur de la prévention avec des actions concrètes menées tout au long de l’année.\n \nCette année, plus de 100 collaborateurs ont bénéficié d’un bilan de prévention consacré au dépistage du diabète, du cholestérol et de l’hypertension artérielle, grâce à un dispositif financé par CAAPE. Une occasion d’échanger avec un professionnel de santé, de mieux connaître ses facteurs de risque, et de repartir avec des conseils personnalisés et applicables sur le lieu de travail.\n\nEn parallèle, une campagne dédiée à la santé auditive, menée avec l’association JNA, a permis à plus de 500 collaborateurs de réaliser un test de dépistage en ligne et de mieux évaluer leur audition.\n \nCes initiatives illustrent une conviction forte : la prévention est un levier essentiel pour préserver la santé et le bien-être de nos collaborateurs, parce qu’une entreprise responsable est aussi une entreprise qui accompagne chacun dans la préservation de sa santé.\n\nCes actions de prévention continueront sur la fin d'année à l'occasion d'Octobre rose et Movember.",
+          "mentions": [],
+          "attachments": [
+            {
+              "id": "D5622AQFX8OVlOAbLwQ",
+              "sticker": false,
+              "size": {
+                "height": 1066,
+                "width": 800
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D5622AQFX8OVlOAbLwQ/feedshare-shrink_800/B56aBIwskBHMAc-/0/1787927120851?e=1790812800&v=beta&t=JOeoJH-551u97_xLlFcPdX7Lt_tN1dU14rHlg47jAso"
+            }
+          ],
+          "author": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true,
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E0BAQEYw4X1XTizyQ/company-logo_200_200/B4EZretkWQHgAI-/0/1764673079265/crdit_agricole_normandie_logo?e=1790812800&v=beta&t=p5cZzLhrA1lpxusLP_jN-9DNfZ1G4Fhbr84v4IQdW0g"
+          },
+          "id": "7499109879572230144",
+          "is_repost": false,
+          "parsed_datetime": "2026-08-28T14:25:22.014Z"
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:ugcPost:7495402591959416832",
+          "share_url": "https://www.linkedin.com/posts/village-by-ca-normandie_rejoignez-le-village-by-ca-normandie-ugcPost-7495402591959416832-Dg0a?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "3w",
+          "comment_counter": 0,
+          "impressions_counter": 0,
+          "reaction_counter": 53,
+          "repost_counter": 13,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "🚀 Rejoignez le Village by CA Normandie !\n\nNotre nouvel appel à candidatures est officiellement ouvert jusqu'au 13 septembre 2026.\nVous avez un projet innovant en phase d'accélération ? C'est peut-être le moment de franchir une nouvelle étape.\n\nAu Village by CA Normandie, vous bénéficiez de :\n🤝 Un accompagnement personnalisé pendant 2 ans\n🌐 Un réseau de partenaires, d'experts et de grandes entreprises\n💼 Des opportunités de business et de collaboration\n📈 Un accompagnement pour structurer et accélérer votre développement\n📍Un écosystème d'innovation implanté au MoHo à Caen\n\nComment candidater ?\nEnvoyez votre dossier à levillagebycanormandie@ca-normandie.fr avec :\n ✔️ Le nom de votre société\n ✔️ Le lien de votre site internet (si existant)\n ✔️ Le nom et prénom de la personne référente\n ✔️ Une présentation de votre activité\n ✔️ Votre deck de présentation\n ✔️ Votre business plan\nNotre équipe vous recontactera rapidement afin d'échanger sur votre projet et répondre à vos questions.\n\n📅 Candidatez avant le 13 septembre 2026.\nNous avons hâte de découvrir votre projet !\n\nCéline VINCENT ; Anaëlle Tudoce ; Sophie Hochet",
+          "mentions": [
+            {
+              "url": "https://www.linkedin.com/company/moho-nation/",
+              "length": 4,
+              "start": 564
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAC67ohUB4rc69oITV6NvA5hTB404zZAYjys",
+              "length": 14,
+              "start": 1076
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAADKEhKcBe484beQ3eQqEfip62VnACbP7mmA",
+              "length": 14,
+              "start": 1093
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAACLj80UB8JpiKygC7dKHcF3m9ZWVJrqRIk8",
+              "length": 13,
+              "start": 1110
+            }
+          ],
+          "attachments": [
+            {
+              "id": "D4E22AQFjVtZsVk6ykA",
+              "sticker": false,
+              "size": {
+                "height": 600,
+                "width": 480
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4E22AQFjVtZsVk6ykA/feedshare-shrink_480/B4EaAUE8BkJEAg-/0/1787043234168?e=1790812800&v=beta&t=rhk7WR1GvvvHA4_XVHlgz9ZngLkObzpMA98A0zfIvkA"
+            },
+            {
+              "id": "D4E22AQHotFgw7-1J1g",
+              "sticker": false,
+              "size": {
+                "height": 600,
+                "width": 480
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4E22AQHotFgw7-1J1g/feedshare-shrink_480/B4EaAUE70tHEAg-/0/1787043233356?e=1790812800&v=beta&t=XuMTEo6zW1kdUhGyc4FQTy7yi-NYkDoRqlEVCphwiv0"
+            },
+            {
+              "id": "D4E22AQEjGxl5IZVldw",
+              "sticker": false,
+              "size": {
+                "height": 600,
+                "width": 480
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4E22AQEjGxl5IZVldw/feedshare-shrink_480/B4EaAUE8CZKoAg-/0/1787043234248?e=1790812800&v=beta&t=TbPIyrmaJcqoFlC_szAvj8zDrfq7KRYqDZuYfOFZGAg"
+            },
+            {
+              "id": "D4E22AQHmnvo9bJgO5g",
+              "sticker": false,
+              "size": {
+                "height": 600,
+                "width": 480
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4E22AQHmnvo9bJgO5g/feedshare-shrink_480/B4EaAUE8A9IgAg-/0/1787043234156?e=1790812800&v=beta&t=dLWGqCz63zuAMNz2SE84XSvc_t4ABC90FJx4_e5Xf_k"
+            },
+            {
+              "id": "D4E22AQESlqDILjMKQw",
+              "sticker": false,
+              "size": {
+                "height": 600,
+                "width": 480
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4E22AQESlqDILjMKQw/feedshare-shrink_480/B4EaAUE70lIgAg-/0/1787043233322?e=1790812800&v=beta&t=cYOf-AU5QEVjZ5T3ST5fKZu1lZxcFNXLzxeSwUpSRHc"
+            }
+          ],
+          "author": {
+            "public_identifier": "village-by-ca-normandie",
+            "id": "101863815",
+            "name": "Le Village by CA Normandie",
+            "is_company": true,
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E0BAQFN5jMxcqGn0w/company-logo_200_200/company-logo_200_200/0/1730379816764/village_by_ca_normandie_logo?e=1790812800&v=beta&t=pTH0-KtlKfgvTxxoz-IthjJkTiPXJGMQiUupnPRygPg"
+          },
+          "id": "7495402591959416832",
+          "is_repost": true,
+          "repost_id": "7495489906341867521",
+          "parsed_datetime": "2026-08-18T08:53:55.769Z",
+          "repost_parsed_datetime": "2026-08-18T14:40:53.140Z",
+          "reposted_by": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true
+          }
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:ugcPost:7491775588504932352",
+          "share_url": "https://www.linkedin.com/posts/stademalherbecaen_%F0%9D%97%A8%F0%9D%97%BB-%F0%9D%97%BA%F0%9D%97%AE%F0%9D%97%B6%F0%9D%97%B9%F0%9D%97%B9%F0%9D%97%BC%F0%9D%98%81-%F0%9D%9F%AD%F0%9D%9F%AC%F0%9D%9F%AC%F0%9D%9F%AC-%F0%9D%97%B2%F0%9D%98%85%F0%9D%97%BD%F0%9D%97%BF%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%80%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB%F0%9D%98%80-ugcPost-7491775588504932352-vJMk?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "1mo",
+          "comment_counter": 12,
+          "impressions_counter": 0,
+          "reaction_counter": 404,
+          "repost_counter": 5,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "𝗨𝗻 𝗺𝗮𝗶𝗹𝗹𝗼𝘁, 𝟭𝟬𝟬𝟬 𝗲𝘅𝗽𝗿𝗲𝘀𝘀𝗶𝗼𝗻𝘀 ❤️💙\n\nPour cette nouvelle saison, le Stade Malherbe Caen et Nike dévoilent un maillot pensé pour rassembler toutes celles et ceux qui le font vivre. \n\n1000 expressions. 1000 regards. 1000 émotions. 1000 histoires. Un seul maillot.",
+          "mentions": [
+            {
+              "url": "https://www.linkedin.com/company/stademalherbecaen/",
+              "length": 19,
+              "start": 65
+            },
+            {
+              "url": "https://www.linkedin.com/company/nike/",
+              "length": 4,
+              "start": 88
+            }
+          ],
+          "attachments": [
+            {
+              "id": "D4E22AQGQECSRmtetYg",
+              "sticker": false,
+              "size": {
+                "height": 1066,
+                "width": 800
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4E22AQGQECSRmtetYg/feedshare-shrink_800/B4EZ_giMpQJUAc-/0/1786178489249?e=1790812800&v=beta&t=3ojbp7f05pVcj77V0WbcWuVKNgT964_raoWFVX6rgho"
+            },
+            {
+              "id": "D4E22AQHck-la2yncqA",
+              "sticker": false,
+              "size": {
+                "height": 1066,
+                "width": 800
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4E22AQHck-la2yncqA/feedshare-shrink_800/B4EZ_giMlFJQAc-/0/1786178489109?e=1790812800&v=beta&t=0u1kSJ8RJbj3UEcu3haBY3cmFpu-abH8MRBHR1SO2H0"
+            }
+          ],
+          "author": {
+            "public_identifier": "stademalherbecaen",
+            "id": "11500134",
+            "name": "Stade Malherbe Caen",
+            "is_company": true,
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/C4E0BAQHVbfifH0DWIg/company-logo_200_200/company-logo_200_200/0/1674656480920/stademalherbecaen_logo?e=1790812800&v=beta&t=lx3S2zWSeOMy4uE2zRd-UOIzobQKIWKjv8JS64pU7jU"
+          },
+          "id": "7491775588504932352",
+          "is_repost": true,
+          "repost_id": "7492919417937272832",
+          "parsed_datetime": "2026-08-08T08:41:30.759Z",
+          "repost_parsed_datetime": "2026-08-11T12:26:40.947Z",
+          "reposted_by": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true
+          }
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:ugcPost:7479897108939046912",
+          "share_url": "https://www.linkedin.com/posts/cr%C3%A9dit-agricole-normandie_craezditagricolenormandie-cettefamille-aezconomiesocialeetsolidaire-activity-7479897322005364736-ytP6?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "2mo",
+          "comment_counter": 0,
+          "impressions_counter": 0,
+          "reaction_counter": 91,
+          "repost_counter": 10,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "🏡 Retour en images sur la journée porte-ouverte d’une nouvelle maison CetteFamille à Marigny !\n\nNous avons eu le privilège de visiter une nouvelle maison de colocation pour personnes âgées atteintes de maladies neurodégénératives à Marigny (50), aux côtés de notre partenaire CetteFamille.\n \nCéline Mazier, Vice-Présidente du Crédit Agricole Normandie a pu rappeler l’importance de l’engagement du Crédit Agricole Normandie dans le domaine de la santé au plus près des territoires.\n \n💙 Pourquoi cet engagement ?\nFace au doublement prévu du nombre de personnes âgées en perte d'autonomie dans les 10 prochaines années, nous devons agir. Ces maisons offrent une solution intermédiaire entre le domicile et l'EHPAD, permettant à nos aînés de rester dans leur territoire, dans un cadre familial et chaleureux.\n\n👥 Le rôle clé de nos Administrateurs du Crédit Agricole Normandie.\nNos administrateurs de Caisses locales jouent un rôle essentiel dans l’identification des futurs projets de colocations séniors. Leur engagement concret permet de répondre aux besoins de nos aînés et de leurs familles en participant à la vie des territoires.\n\n🤝 Un partenariat qui a du sens\nCe qui nous rapproche de CetteFamille ? Des valeurs communes :\n•\tLa proximité et l'ancrage local.\n•\tLa solidarité en tant qu'acteur de l'économie sociale et solidaire.\n•\tLa responsabilité pour des solutions durables face au vieillissement.\n \nUn grand merci aux élus locaux, aux équipes de CetteFamille et à tous nos Administrateurs pour leur engagement au service de nos territoires normands.\n \n#CréditAgricoleNormandie #CetteFamille #ÉconomieSocialeetSolidaire #Territoires #SeniorsAutonomes #ImpactSocial #Normandie",
+          "mentions": [
+            {
+              "url": "https://www.linkedin.com/company/cettefamille/",
+              "length": 12,
+              "start": 276
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAEwHhKgBSHEs4T1cC3vMK5jWPhHN74_tlmc",
+              "length": 13,
+              "start": 292
+            },
+            {
+              "url": "https://www.linkedin.com/company/cr%C3%A9dit-agricole-normandie/",
+              "length": 25,
+              "start": 398
+            },
+            {
+              "url": "https://www.linkedin.com/company/cr%C3%A9dit-agricole-normandie/",
+              "length": 25,
+              "start": 847
+            },
+            {
+              "url": "https://www.linkedin.com/company/cettefamille/",
+              "length": 12,
+              "start": 1190
+            }
+          ],
+          "attachments": [
+            {
+              "type": "video",
+              "gif": false,
+              "id": "D5605AQENowOC5U3ffA",
+              "size": {
+                "height": 720,
+                "width": 1280
+              },
+              "unavailable": false,
+              "url": "https://dms.licdn.com/playlist/vid/v2/D5605AQENowOC5U3ffA/mp4-720p-30fp-crf28/B56Z83u4XVGUB8-/0/1783346480806?e=1789563600&v=beta&t=F-nwxgVnDI8tyv37vbByMBS3ntfBJVtje8WdWPv2du0"
+            }
+          ],
+          "author": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true,
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E0BAQEYw4X1XTizyQ/company-logo_200_200/B4EZretkWQHgAI-/0/1764673079265/crdit_agricole_normandie_logo?e=1790812800&v=beta&t=p5cZzLhrA1lpxusLP_jN-9DNfZ1G4Fhbr84v4IQdW0g"
+          },
+          "id": "7479897322005364736",
+          "is_repost": false,
+          "parsed_datetime": "2026-07-06T14:01:31.338Z"
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:ugcPost:7476289312712462337",
+          "share_url": "https://www.linkedin.com/posts/cr%C3%A9dit-agricole-normandie_businessday-activity-7476289313962520577-B1MZ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "2mo",
+          "comment_counter": 0,
+          "impressions_counter": 0,
+          "reaction_counter": 62,
+          "repost_counter": 12,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "A l’occasion de la deuxième édition du #BusinessDay, nous avons eu le plaisir d’accueillir une centaine de dirigeants d’entreprise pour échanger autour des questions de développement et bénéficier de l’expertise de nos équipes, filiales et partenaires.\n\nAu programme :\n🔹 9 espaces d’expertise, réunissant nos conseillers, filiales et partenaires pour apporter des réponses concrètes aux enjeux des entreprises : financement, développement, international, transitions, ressources humaines, transmission…\n🔹Une table ronde consacrée aux nouveaux leviers RH, animée par Anne-Aymone Boulon, avec les témoignages de Nicolas COURTIER, Stephane Andrieu, Annie Letourniant et Hadrien Curs\n🔹Une conférence économique animée par Isabelle Job-Bazille, Directrice des études économiques de Groupe Crédit Agricole, sur les leviers permettant de transformer les incertitudes macroéconomiques en opportunités stratégiques.\n \nMerci à l’ensemble des participants, partenaires et collaborateurs qui ont contribué à la réussite de cette édition 2026.\n\nStephane Binet\nAmundi Crédit Agricole Assurances\nEddy LENAS Robin Assire Caroline Printant Grandcollot",
+          "mentions": [
+            {
+              "url": "https://www.linkedin.com/in/ACoAAAqbCzoBlHeVAIwA9RiAM03pfgev0gmCYUA",
+              "length": 18,
+              "start": 566
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAAAXRt8BSH5D21fuXW56Vd9nlQSYDHdbd08",
+              "length": 16,
+              "start": 610
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAARdU00BYWe4XEcHtNNglsZb-J9Z98BCPR4",
+              "length": 16,
+              "start": 628
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAABsXzp0BwYJQUUhTATzwawZYnqhFOReKEBs",
+              "length": 17,
+              "start": 646
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAAd2AHEBOTs4WN8n2yslZypXpAPjCWZlguM",
+              "length": 12,
+              "start": 667
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAAL1c5EBFpqMUMFVY1vn8OTLjdyYMPMlv2c",
+              "length": 20,
+              "start": 718
+            },
+            {
+              "url": "https://www.linkedin.com/company/credit-agricole/",
+              "length": 22,
+              "start": 777
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAABd835IBXL1tCy7DjrPU65-UcWgySjRvEoc",
+              "length": 14,
+              "start": 1032
+            },
+            {
+              "url": "https://www.linkedin.com/company/amundi-/",
+              "length": 6,
+              "start": 1047
+            },
+            {
+              "url": "https://www.linkedin.com/company/credit-agricole-assurances/",
+              "length": 26,
+              "start": 1054
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAABA9Ea8BW5CtZdTRxiVWA2PHv4VRfeOnCHQ",
+              "length": 10,
+              "start": 1081
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAACHLXF8BbTitIWe9DqBBir27xYw9n8cgd38",
+              "length": 12,
+              "start": 1092
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAAPLa_ABpZ5A_ucF3wyD8hhIVkhp7uYoBGc",
+              "length": 29,
+              "start": 1105
+            }
+          ],
+          "attachments": [
+            {
+              "id": "D4D22AQE2AIeroZmESw",
+              "sticker": false,
+              "size": {
+                "height": 602,
+                "width": 800
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4D22AQE2AIeroZmESw/feedshare-shrink_800/B4DZ8EdgrXI8Ac-/0/1782486273184?e=1790812800&v=beta&t=PkNFhQKR-pI8UEROhtDvpCicpYuJdoChctTpV7TXE2s"
+            },
+            {
+              "id": "D4D22AQEIFH2c5wYUAg",
+              "sticker": false,
+              "size": {
+                "height": 600,
+                "width": 800
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4D22AQEIFH2c5wYUAg/feedshare-shrink_800/B4DZ8EddzcIYAc-/0/1782486261250?e=1790812800&v=beta&t=6J9NOoSuz3GaTS6b-NGqZRLV0xiPE3mjejYdnCaH1sE"
+            }
+          ],
+          "author": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true,
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E0BAQEYw4X1XTizyQ/company-logo_200_200/B4EZretkWQHgAI-/0/1764673079265/crdit_agricole_normandie_logo?e=1790812800&v=beta&t=p5cZzLhrA1lpxusLP_jN-9DNfZ1G4Fhbr84v4IQdW0g"
+          },
+          "id": "7476289313962520577",
+          "is_repost": false,
+          "parsed_datetime": "2026-06-26T15:04:35.187Z"
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:ugcPost:7473716130336096257",
+          "share_url": "https://www.linkedin.com/posts/cr%C3%A9dit-agricole-normandie_retourenimages-activity-7473716131606712320-o9iL?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "2mo",
+          "comment_counter": 1,
+          "impressions_counter": 0,
+          "reaction_counter": 28,
+          "repost_counter": 1,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "#Retourenimages 📸 \n\n🤝 120 jeunes volontaires d'Unis-Cité Normandie ont participé mardi à la journée Tremplins, une étape clé de leur parcours de service civique tournée vers la préparation de leur avenir.\n\nÀ cette occasion, des binômes entre les collaborateurs du Crédit Agricole Normandie et les partenaires ont pris part à des temps d'échange et de partage d'expérience pour accompagner les jeunes dans leurs réflexions et leurs projets.\nElles nous permettent aussi de découvrir une jeunesse engagée, pleine d'initiatives. Des échanges qui rappellent que chacun a quelque chose à transmettre, mais aussi à apprendre.\n\nPartenaire d'Unis-Cité tout au long de l'année, le Crédit Agricole Normandie s'engage aux côtés des jeunes à travers des actions de mentorat, des ateliers d'éducation budgétaire et différents projets solidaires menés sur le territoire.\n\nUn engagement rendu possible grâce à l'implication de nos collaborateurs et de nos administrateurs, qui font vivre ce partenariat au plus près des besoins et des aspirations de la jeunesse normande. Merci à tous.\n\nJean-François Benazet-Lacarre-Manzac\nLandier Peggy Clément Leblay\nCecilia Laemle Sonia ALLEGRE-BOULET Sonia Charlotte LABBE Charlotte Véret Franck Mangion ROSALIE LEROTY Maxime Fontaine-Chupin ELSA KOUZOGLOU Armelle HOCQUIGNY",
+          "mentions": [
+            {
+              "url": "https://www.linkedin.com/in/ACoAAE9bSOUBEGtDnETLt4ddcJER9A4d_iErVbI",
+              "length": 19,
+              "start": 47
+            },
+            {
+              "url": "https://www.linkedin.com/company/cr%C3%A9dit-agricole-normandie/",
+              "length": 25,
+              "start": 264
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAAV7DQ0BOvPs4_-6aU5crBuZgT2sD7AWSkY",
+              "length": 36,
+              "start": 1071
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAACbUmzkBX73sg5dTsofCNmF9hDgDw6gxYaE",
+              "length": 13,
+              "start": 1108
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAA5pm8cBbGeFEXQ6aRhX5-bbRkP9kW6xGPk",
+              "length": 14,
+              "start": 1122
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAACqlGccB7F9FHVVduABGhaQSDqHVcP4ngFg",
+              "length": 14,
+              "start": 1137
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAABkuTMIBxDCGIq8qIo6APttA5M-plQxwzEs",
+              "length": 26,
+              "start": 1152
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAAk23FgBWHNK8GSGCPYTux2eb8-nILFT5Ik",
+              "length": 15,
+              "start": 1179
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAA5YhPwBOip8DroCrrsDmKD8FFXH8Lmhbqk",
+              "length": 15,
+              "start": 1195
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAADgTrlcBYCFO8k_mI9mJowH5AsQEKWZaR0c",
+              "length": 14,
+              "start": 1211
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAACNKHmsB8toOqTFapiAr1tU2iHOHavC3ckw",
+              "length": 14,
+              "start": 1226
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAACGgCE8BbeBuZN0CMk7hSJAVa2BwyzpMIOg",
+              "length": 22,
+              "start": 1241
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAACUvahEBygG2s7oCUUzS1YIBn_XBPp6Ahbk",
+              "length": 14,
+              "start": 1264
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAACTCUmoBCp63jN-oZt60GVbA-VnSlT_r6eg",
+              "length": 17,
+              "start": 1279
+            }
+          ],
+          "attachments": [
+            {
+              "id": "D5622AQGdSg6ZeGf6-g",
+              "sticker": false,
+              "size": {
+                "height": 600,
+                "width": 800
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D5622AQGdSg6ZeGf6-g/feedshare-shrink_800/B56Z7f5Nx2IUAc-/0/1781872778748?e=1790812800&v=beta&t=5k7rwiIAzsLssBFtQ9L5hEfQPJOuUrG2e7f3rVvCMK0"
+            },
+            {
+              "id": "D5622AQHT3V1V-bGnwg",
+              "sticker": false,
+              "size": {
+                "height": 308,
+                "width": 800
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D5622AQHT3V1V-bGnwg/feedshare-shrink_800/B56Z7f5NuKJoAc-/0/1781872778334?e=1790812800&v=beta&t=VnqR-Z_-9dbFjuu3tHXcMRikLaIOH0wwEaNyd0zJNpE"
+            }
+          ],
+          "author": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true,
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E0BAQEYw4X1XTizyQ/company-logo_200_200/B4EZretkWQHgAI-/0/1764673079265/crdit_agricole_normandie_logo?e=1790812800&v=beta&t=p5cZzLhrA1lpxusLP_jN-9DNfZ1G4Fhbr84v4IQdW0g"
+          },
+          "id": "7473716131606712320",
+          "is_repost": false,
+          "parsed_datetime": "2026-06-19T12:39:40.706Z"
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:ugcPost:7471220255185383424",
+          "share_url": "https://www.linkedin.com/posts/cr%C3%A9dit-agricole-normandie_agirchaquejour-mobilisaezsensemble-activity-7471220996985794560-Np8H?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "2mo",
+          "comment_counter": 0,
+          "impressions_counter": 0,
+          "reaction_counter": 53,
+          "repost_counter": 10,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "📸 Retour en images sur l’édition 2026 de la Rochambelle \n\n🩷 Fidèle partenaire du Marathon de la Liberté et de la Rochambelle, nous étions 240 collaborateurs du Crédit Agricole Normandie à prendre le départ des différentes courses solidaires et commémoratives le weekend dernier !🏃‍♂️Ce sont plus de 90 000€ de dons collectés au profit de la lutte contre le cancer 🎗 \n\n👏 Bravo à tous les participants pour leur solidarité et leur bonne humeur ! \n\n#AgirChaqueJour #MobilisésEnsemble",
+          "mentions": [
+            {
+              "url": "https://www.linkedin.com/company/marathondelaliberte/",
+              "length": 22,
+              "start": 81
+            },
+            {
+              "url": "https://www.linkedin.com/company/cr%C3%A9dit-agricole-normandie/",
+              "length": 25,
+              "start": 160
+            }
+          ],
+          "attachments": [
+            {
+              "type": "video",
+              "gif": false,
+              "id": "D4E05AQEisv2THhczkg",
+              "size": {
+                "height": 1280,
+                "width": 720
+              },
+              "unavailable": false,
+              "url": "https://dms.licdn.com/playlist/vid/v2/D4E05AQEisv2THhczkg/mp4-720p-30fp-crf28/B4EZ68bvpqHkCA-/0/1781277885739?e=1789563600&v=beta&t=Q3FIXzArk8az1VkhHIVt5Z5UG99XwWnunVanVSBR_d8"
+            }
+          ],
+          "author": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true,
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E0BAQEYw4X1XTizyQ/company-logo_200_200/B4EZretkWQHgAI-/0/1764673079265/crdit_agricole_normandie_logo?e=1790812800&v=beta&t=p5cZzLhrA1lpxusLP_jN-9DNfZ1G4Fhbr84v4IQdW0g"
+          },
+          "id": "7471220996985794560",
+          "is_repost": false,
+          "parsed_datetime": "2026-06-12T15:24:54.255Z"
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:ugcPost:7470410310336729088",
+          "share_url": "https://www.linkedin.com/posts/anthony-lever-400592108_nous-venons-dinaugurer-les-nouvelles-ombri%C3%A8res-ugcPost-7470410310336729088-foYd?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "2mo",
+          "comment_counter": 4,
+          "impressions_counter": 0,
+          "reaction_counter": 481,
+          "repost_counter": 30,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "Nous venons d'inaugurer les nouvelles ombrières photovoltaïques de notre siège Crédit Agricole Normandie à Caen.\n \nAu-delà de l’équipement lui-même, j’y vois surtout le symbole de la cohérence entre nos engagements et nos actions.\nChaque jour, nous accompagnons les transitions de notre territoire à travers des projets d’énergies renouvelables, la rénovation énergétique des logements de nos clients, la mobilité décarbonée… Mais nous agissons également sur notre propre fonctionnement.\n \nAvec cette installation, nous franchissons une nouvelle étape en matière de décarbonation :\n🔹 2 340 m² d’ombrières photovoltaïques\n🔹 700 000 kWh produits chaque année\n🔹 57 bornes de recharge disponibles sur le site\n🔹 Et 30 % de notre consommation électrique couverte par notre propre production.\n \nCes investissements majeurs sont réalisés avec des entreprises du territoire, ce qui marque également notre engagement dans l’économie normande.\n \nCe projet va plus loin : une transition réussie est une transition qui se partage. C’est pourquoi nous avons fait le choix de l’autoconsommation collective : l’énergie produite et non consommée sur notre site sera redistribuée à l’Hôpital privé Saint-Martin, qui contribue au bien-être de nos concitoyens normands.\n \nJe tiens à remercier les équipes, les entreprises normandes et l’ensemble de nos partenaires qui ont contribué à cette belle réalisation.\n \nAgir pour la décarbonation de notre territoire, c’est accompagner les transitions de nos clients, et c’est aussi montrer l’exemple dans nos propres pratiques.\n \nEurovia France\nRonco Construction Company\nCCS Construction Métallique\nSMB Constructions Métalliques\nSignal-eco\nMasselin Energie\nAEV2000 \nStéphane CLERISSE\nChristophe CIRAUDO\nAlexandre Marret",
+          "mentions": [
+            {
+              "url": "https://www.linkedin.com/company/cr%C3%A9dit-agricole-normandie/",
+              "length": 25,
+              "start": 79
+            },
+            {
+              "url": "https://www.linkedin.com/company/hopital-prive-saint-martin-caen/",
+              "length": 26,
+              "start": 1166
+            },
+            {
+              "url": "https://www.linkedin.com/company/euroviafrance/",
+              "length": 14,
+              "start": 1553
+            },
+            {
+              "url": "https://www.linkedin.com/company/ronco-construction-company/",
+              "length": 26,
+              "start": 1568
+            },
+            {
+              "url": "https://www.linkedin.com/company/ccs-construction-metallique/",
+              "length": 27,
+              "start": 1595
+            },
+            {
+              "url": "https://www.linkedin.com/company/smb-cm/",
+              "length": 29,
+              "start": 1623
+            },
+            {
+              "url": "https://www.linkedin.com/company/signal-eco/",
+              "length": 10,
+              "start": 1653
+            },
+            {
+              "url": "https://www.linkedin.com/company/masselin-energie/",
+              "length": 16,
+              "start": 1664
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAFHsznQByJ_jl3mqHYgfRjzXQwbNsFPY9Io",
+              "length": 17,
+              "start": 1690
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAA4KKlEBK4TESX4TigCgh-JjrLGsFPnQxgE",
+              "length": 18,
+              "start": 1708
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAAOlJYoBoFfQU98aeuVj3iH1eTw_WkZyPds",
+              "length": 16,
+              "start": 1727
+            }
+          ],
+          "attachments": [
+            {
+              "id": "D4E22AQFjQI36s0vItA",
+              "sticker": false,
+              "size": {
+                "height": 555,
+                "width": 800
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4E22AQFjQI36s0vItA/feedshare-shrink_800/B4EZ6w6lfyKoAc-/0/1781084608975?e=1790812800&v=beta&t=EUEDOAIOf8rCiJAfn25I8Qin2Cgmkgr04I5IGHQkZjY"
+            },
+            {
+              "id": "D4E22AQFxa6fl2ZhUqQ",
+              "sticker": false,
+              "size": {
+                "height": 441,
+                "width": 800
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4E22AQFxa6fl2ZhUqQ/feedshare-shrink_800/B4EZ6w6lvNHoAg-/0/1781084609903?e=1790812800&v=beta&t=yxnCFWebz0JjyX0IV9J5KKfZJUtfZLZntIeuDiHlj5M"
+            },
+            {
+              "id": "D4E22AQGz8vEEyK7mfA",
+              "sticker": false,
+              "size": {
+                "height": 533,
+                "width": 800
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4E22AQGz8vEEyK7mfA/feedshare-shrink_800/B4EZ6w6lhnIcAg-/0/1781084609369?e=1790812800&v=beta&t=yHeunjQ1y-aZhrhkG5tOORmvNTeMEKDWXpXCwsW7Sh4"
+            }
+          ],
+          "author": {
+            "public_identifier": "anthony-lever-400592108",
+            "id": "ACoAABsjZMAB6YTFjWeErBJ3SUO56VIgeQ42fPM",
+            "name": "Anthony Lever",
+            "is_company": false,
+            "headline": "Directeur Général Crédit Agricole Normandie",
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E03AQGruSTE8feJFA/profile-displayphoto-shrink_400_400/B4EZxBHM.IHgAg-/0/1770618933606?e=1790812800&v=beta&t=dfHCKjhS9IxWnnwFTtldNsMB2Q4PZCn0KkkCNIC3k10"
+          },
+          "id": "7470410310336729088",
+          "is_repost": true,
+          "repost_id": "7470411584515928064",
+          "parsed_datetime": "2026-06-10T09:43:31.496Z",
+          "repost_parsed_datetime": "2026-06-10T09:48:35.284Z",
+          "reposted_by": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true
+          }
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:activity:7468679595320594432",
+          "share_url": "https://www.linkedin.com/posts/cr%C3%A9dit-agricole-normandie_appelaeqprojets-agirchaquejour-normandie-activity-7468679595320594432-LGKq?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "3mo",
+          "comment_counter": 0,
+          "impressions_counter": 0,
+          "reaction_counter": 18,
+          "repost_counter": 10,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "📣 Appel à projets pour soutenir les actions de préservation, d'adaptation et de restauration du patrimoine naturel de nos territoires. \n \n🌱💼 La Fondation Crédit Agricole Pays de France lance son sixième appel à projets en faveur du patrimoine naturel. \n \nLes projets recherchés sont des initiatives qui cherchent à :\n➡️restaurer les espaces naturels patrimoniaux et favoriser la préservation des milieux \n➡️protéger les écosystèmes des espèces emblématiques et sauvegarder les espèces menacées\n \n📆 Déposez vos dossiers jusqu'au 30 juin sur le site internet https://lnkd.in/gauQud7\n \n🤝🌏 La Fondation mettra l'accent sur des initiatives au service de la nature et de la transmission aux générations futures des ressources nécessaires à son épanouissement. \n \n#AppelÀProjets #AgirChaqueJour #Normandie #EnsembleOnYarrivera #Biodiversité",
+          "mentions": [
+            {
+              "url": "https://www.linkedin.com/company/fondation-cr%C3%A9dit-agricole-pays-de-france/",
+              "length": 40,
+              "start": 144
+            }
+          ],
+          "attachments": [
+            {
+              "id": "D4E22AQGybUmZIPvvEQ",
+              "sticker": false,
+              "size": {
+                "height": 480,
+                "width": 480
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4E22AQGybUmZIPvvEQ/feedshare-shrink_480/B4EZ6YUhEmHsAg-/0/1780671976039?e=1790812800&v=beta&t=f8OyewchX55HaApSij9phcbhbSmlywVOYvmZBDrytVw"
+            }
+          ],
+          "author": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true,
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E0BAQEYw4X1XTizyQ/company-logo_200_200/B4EZretkWQHgAI-/0/1764673079265/crdit_agricole_normandie_logo?e=1790812800&v=beta&t=p5cZzLhrA1lpxusLP_jN-9DNfZ1G4Fhbr84v4IQdW0g"
+          },
+          "id": "7468679595320594432",
+          "is_repost": false,
+          "parsed_datetime": "2026-06-05T15:06:16.881Z"
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:ugcPost:7466139941773914112",
+          "share_url": "https://www.linkedin.com/posts/cr%C3%A9dit-agricole-normandie_plus-engag%C3%A9-dans-les-transitions-%C3%A9nerg%C3%A9tiques-activity-7466139942730252288-POa5?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "3mo",
+          "comment_counter": 0,
+          "impressions_counter": 0,
+          "reaction_counter": 20,
+          "repost_counter": 2,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "Agir pour les territoires, c’est aussi accompagner les transitions qui les transforment durablement.\n\nRéduction de l’empreinte carbone, financement de projets de transition énergétique, accompagnement des acteurs locaux dans leurs démarches plus durables : notre engagement se traduit par des actions concrètes.\n\nAvec Impacts+, nous mettons en lumière ces initiatives et leur impact réel : contribuer à une économie plus responsable et accompagner les transitions environnementales sur le terrain.\n\n👉 Pour aller plus loin, découvrez l'intégralité de notre démarche et de nos actions dans le document complet : https://lnkd.in/dm-_EvFe",
+          "mentions": [],
+          "attachments": [
+            {
+              "type": "file",
+              "id": "D561FAQGbKjPww47FSw",
+              "file_name": "Plus engagé dans les transitions énergétiques",
+              "file_size": 0,
+              "mimetype": "application/pdf",
+              "unavailable": false,
+              "url": "https://media.licdn.com/dms/document/media/v2/D561FAQGbKjPww47FSw/feedshare-document-url-metadata-scrapper-pdf/B56Z5z0D_3IcA8-/0/1780059489826?e=1789563600&v=beta&t=EFc79vFtluiz5K_9iWw2TSEOJDXKOtDQ8WHPPwTIJck",
+              "url_expires_at": 1789563600000
+            }
+          ],
+          "author": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true,
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E0BAQEYw4X1XTizyQ/company-logo_200_200/B4EZretkWQHgAI-/0/1764673079265/crdit_agricole_normandie_logo?e=1790812800&v=beta&t=p5cZzLhrA1lpxusLP_jN-9DNfZ1G4Fhbr84v4IQdW0g"
+          },
+          "id": "7466139942730252288",
+          "is_repost": false,
+          "parsed_datetime": "2026-05-29T14:54:36.519Z"
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:ugcPost:7457811339449892866",
+          "share_url": "https://www.linkedin.com/posts/cr%C3%A9dit-agricole-normandie_impacts-activity-7459588149665685504-bL-q?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "3mo",
+          "comment_counter": 0,
+          "impressions_counter": 0,
+          "reaction_counter": 32,
+          "repost_counter": 7,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "🔎 Être utile à notre territoire, c'est agir concrètement, chaque jour, au plus près des besoins locaux.\n\nSoutenir les associations, accompagner les projets qui font bouger le territoire, encourager les initiatives locales... ces engagements font partie de notre raison d'être.\n\nAvec Impacts+, nous rendons visibles ces actions et leur impact : des projets qui se concrétisent, et des liens qui se renforcent durablement.\n\nDécouvrez comment nous contribuons, au quotidien, à la vie locale.\n\n👉 Pour aller plus loin, découvrez l'intégralité de notre démarche et de nos actions dans le document complet : https://lnkd.in/dm-_EvFe",
+          "mentions": [],
+          "attachments": [
+            {
+              "type": "file",
+              "id": "D4D1FAQFm5f6fh-v2vw",
+              "file_name": "Impacts + ",
+              "file_size": 0,
+              "mimetype": "application/pdf",
+              "unavailable": false,
+              "url": "https://media.licdn.com/dms/document/media/v2/D4D1FAQFm5f6fh-v2vw/feedshare-document-sanitized-pdf/B4DZ392tRKKsA8-/0/1778080471717?e=1789563600&v=beta&t=D5T5SPGkKnZaVmMgX6USQZn24kKc9nyx7uHvXYeVzuw",
+              "url_expires_at": 1789563600000
+            }
+          ],
+          "author": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true,
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E0BAQEYw4X1XTizyQ/company-logo_200_200/B4EZretkWQHgAI-/0/1764673079265/crdit_agricole_normandie_logo?e=1790812800&v=beta&t=p5cZzLhrA1lpxusLP_jN-9DNfZ1G4Fhbr84v4IQdW0g"
+          },
+          "id": "7459588149665685504",
+          "is_repost": false,
+          "parsed_datetime": "2026-05-11T13:00:07.326Z"
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:activity:7457794000545095680",
+          "share_url": "https://www.linkedin.com/posts/cr%C3%A9dit-agricole-normandie_prochesaidants-santaezmentale-appelaeqprojets-activity-7457794000545095680-WCCO?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "4mo",
+          "comment_counter": 2,
+          "impressions_counter": 0,
+          "reaction_counter": 35,
+          "repost_counter": 15,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "📣 Appel à projets 2026 : soutenons la santé mentale des proches aidants\n\nLa Fondation Crédit Agricole Assurances lance son nouvel appel à projets dédié au bien-être psychologique des aidants.\nÊtre aidant, c'est un engagement quotidien qui peut fragiliser l'équilibre personnel. En 2026, année de la santé mentale comme grande cause nationale, nous soutenons les initiatives qui font la différence.\n\nLes projets recherchés sont des projets qui :\n➡️favorisent la coopération entre acteurs, notamment avec des structures spécialisées en santé mentale,\n➡️expérimentent des réponses nouvelles à des besoins peu ou mal couverts,\n➡️intègrent une évaluation concrète de leur impact,\n➡️ou portent une attention particulière aux jeunes aidants.\n\n📆 Associations et organismes d'intérêt général : déposez votre dossier du 27 avril au 29 mai 2026\n\n👉 https://lnkd.in/eFMV4kCp\n\n#ProchesAidants #SantéMentale #AppelÀProjets #Solidarité",
+          "mentions": [
+            {
+              "url": "https://www.linkedin.com/company/credit-agricole-assurances/",
+              "length": 26,
+              "start": 86
+            }
+          ],
+          "attachments": [
+            {
+              "id": "D4D22AQFjYMzpl1eDwQ",
+              "sticker": false,
+              "size": {
+                "height": 562,
+                "width": 480
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4D22AQFjYMzpl1eDwQ/feedshare-shrink_480/B4DZ39oH9lIUA0-/0/1778076647720?e=1790812800&v=beta&t=_SWCu-ESyOIFKOaJD900Ap0jH5UcZQIC2xIUICqf41I"
+            }
+          ],
+          "author": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true,
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E0BAQEYw4X1XTizyQ/company-logo_200_200/B4EZretkWQHgAI-/0/1764673079265/crdit_agricole_normandie_logo?e=1790812800&v=beta&t=p5cZzLhrA1lpxusLP_jN-9DNfZ1G4Fhbr84v4IQdW0g"
+          },
+          "id": "7457794000545095680",
+          "is_repost": false,
+          "parsed_datetime": "2026-05-06T14:10:48.842Z"
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:activity:7457338328770650112",
+          "share_url": "https://www.linkedin.com/posts/cr%C3%A9dit-agricole-normandie_entrepreneurs-dirigeants-vous-souhaitez-activity-7457338328770650112-jB7t?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "4mo",
+          "comment_counter": 0,
+          "impressions_counter": 0,
+          "reaction_counter": 120,
+          "repost_counter": 53,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "🎯Entrepreneurs, Dirigeants : vous souhaitez obtenir des conseils sur vos projets de développement et vos enjeux stratégiques ?\n\nLe Crédit Agricole Normandie a le plaisir de vous convier à l'édition 2026 de son 𝐁𝐮𝐬𝐢𝐧𝐞𝐬𝐬 𝐝𝐚𝐲 !\n\nAu programme :\n\n🔹 Rencontrez nos experts et échangez avec d'autres dirigeants 🤝, \n🔹Assistez à des conférences inspirantes, \n🔹Bénéficiez de RDV personnalisés avec nos experts : 🌍 International 💼 Transmission 📈 Opérations stratégiques 💶Solutions de placement et financement 🧠 Fidélisation des salariés ☂️ Protection ♻️ Transition énergétique et environnementale 🔁 Optimisation des Flux \n🔹Partagez un moment dédié avec la direction générale du Crédit Agricole Normandie\n\n📅 Le 24 juin 2026 à partir de 8h30\n\nAu Crédit Agricole Normandie, 15 esplanade Brillaud de Laujardière à Caen\n\n👉 Pensez à vous inscrire ici : https://lnkd.in/diifMd_G\n⚠️ Places limitées pour les RDV personnalisés !",
+          "mentions": [],
+          "attachments": [
+            {
+              "id": "D4D22AQG4wjAA75QD1Q",
+              "sticker": false,
+              "size": {
+                "height": 533,
+                "width": 800
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4D22AQG4wjAA75QD1Q/feedshare-shrink_800/B4DZ3zmZgyHAAg-/0/1777908423069?e=1790812800&v=beta&t=kSocdZ9ULyelWl7B_L0ZXEkLCTUBZ62V1v-64Tb3_7w"
+            }
+          ],
+          "author": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true,
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E0BAQEYw4X1XTizyQ/company-logo_200_200/B4EZretkWQHgAI-/0/1764673079265/crdit_agricole_normandie_logo?e=1790812800&v=beta&t=p5cZzLhrA1lpxusLP_jN-9DNfZ1G4Fhbr84v4IQdW0g"
+          },
+          "id": "7457338328770650112",
+          "is_repost": false,
+          "parsed_datetime": "2026-05-05T08:00:08.225Z"
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:ugcPost:7447631623635820544",
+          "share_url": "https://www.linkedin.com/posts/cr%C3%A9dit-agricole-normandie_le-2-avril-nos-%C3%A9quipes-du-march%C3%A9-des-professionnels-activity-7447631624957177856-5Pv5?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "5mo",
+          "comment_counter": 0,
+          "impressions_counter": 0,
+          "reaction_counter": 73,
+          "repost_counter": 2,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "Le 2 avril, nos équipes du marché des professionnels ont organisé une soirée dédiée aux professionnels libéraux de santé au Caen Basket Calvados - CBC, réunissant près de 100 prospects. \n\nUn moment fort, ouvert par l’intervention de notre Directeur Général Adjoint, Stéphane CLERISSE, qui a rappelé notre engagement aux côtés des acteurs de santé.\n\nTout au long de la soirée, nos experts — assurances, banque des ressources humaines, flux, engagement des professionnels et banque privée — étaient mobilisés pour échanger, partager leurs expertises et faire émerger de nouvelles synergies.\n\nUn grand merci à l’ensemble des participants et aux équipes mobilisées pour la réussite de cet événement, qui illustre pleinement notre volonté d’accompagner durablement les professionnels de santé dans leurs projets.\n\n\nPaul Lucas Eugenie Mariette Bastien BOULEY",
+          "mentions": [
+            {
+              "url": "https://www.linkedin.com/company/caen-basket-calvados/",
+              "length": 26,
+              "start": 124
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAFHsznQByJ_jl3mqHYgfRjzXQwbNsFPY9Io",
+              "length": 17,
+              "start": 266
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAABaWH94BHdUQafVaz1dCqdBoBkyYlZ8_4Ak",
+              "length": 10,
+              "start": 810
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAB2Hu7gBUagKCNm6PGsQMlpcQcic3a_OKDk",
+              "length": 16,
+              "start": 821
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAABMB83oBKuCrEQ_Y8GscJgVq2NRb__sR0zo",
+              "length": 14,
+              "start": 838
+            }
+          ],
+          "attachments": [
+            {
+              "id": "D4E22AQG6k0CQFTchxA",
+              "sticker": false,
+              "size": {
+                "height": 487,
+                "width": 800
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4E22AQG6k0CQFTchxA/feedshare-shrink_800/B4EZ1tNftxIgAc-/0/1775653747918?e=1790812800&v=beta&t=PxXVa1eIvJLnv9jbWFrrwNkSTwkF2blbwwhdIOR1Q28"
+            },
+            {
+              "id": "D4E22AQG4gW8N_g2nQA",
+              "sticker": false,
+              "size": {
+                "height": 600,
+                "width": 800
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4E22AQG4gW8N_g2nQA/feedshare-shrink_800/B4EZ1tNfuKGQAc-/0/1775653747917?e=1790812800&v=beta&t=qA8dp-TYMY9Gi88dG2tjm2pX9GVmqGa5LhjYp36uCDY"
+            }
+          ],
+          "author": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true,
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E0BAQEYw4X1XTizyQ/company-logo_200_200/B4EZretkWQHgAI-/0/1764673079265/crdit_agricole_normandie_logo?e=1790812800&v=beta&t=p5cZzLhrA1lpxusLP_jN-9DNfZ1G4Fhbr84v4IQdW0g"
+          },
+          "id": "7447631624957177856",
+          "is_repost": false,
+          "parsed_datetime": "2026-04-08T13:09:09.694Z"
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:ugcPost:7444407660906590208",
+          "share_url": "https://www.linkedin.com/posts/cr%C3%A9dit-agricole-normandie_l%C3%A9pargne-salariale-cest-vous-qui-en-parlez-activity-7444407858827288576-qlwv?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "5mo",
+          "comment_counter": 1,
+          "impressions_counter": 0,
+          "reaction_counter": 90,
+          "repost_counter": 23,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "L'épargne salariale, c'est vous qui en parlez le mieux !\n\nDécouvrez, à travers le témoignage de Stephane Andrieu TTA 61, l’épargne salariale, est un levier simple et puissant qui permet de :\n🔹Fidéliser et motiver vos équipes\n🔹Optimiser la fiscalité pour votre entreprise et vos salariés\n🔹Valoriser votre politique sociale\n🔹Partager la performance de manière équitable\n\nVous êtes Dirigeant ou DRH et vous souhaitez optimiser votre politique de rémunération, et si vous passiez à l’action ? https://lnkd.in/eKPUN8kQ\n\nAnne-Aymone Boulon Pascaline Quinton",
+          "mentions": [
+            {
+              "url": "https://www.linkedin.com/in/ACoAAARdU00BYWe4XEcHtNNglsZb-J9Z98BCPR4",
+              "length": 16,
+              "start": 96
+            },
+            {
+              "url": "https://www.linkedin.com/company/tta61/",
+              "length": 6,
+              "start": 113
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAAqbCzoBlHeVAIwA9RiAM03pfgev0gmCYUA",
+              "length": 18,
+              "start": 515
+            }
+          ],
+          "attachments": [
+            {
+              "type": "video",
+              "gif": false,
+              "id": "D4E05AQHkCR6uhBXFWQ",
+              "size": {
+                "height": 720,
+                "width": 1280
+              },
+              "unavailable": false,
+              "url": "https://dms.licdn.com/playlist/vid/v2/D4E05AQHkCR6uhBXFWQ/mp4-720p-30fp-crf28/B4EZ0_ZZscHECM-/0/1774885131031?e=1789563600&v=beta&t=7bkwsJFq9E32CcrqRzcvjgNEjzsbOIqE1v3kvyT1Fs8"
+            }
+          ],
+          "author": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true,
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E0BAQEYw4X1XTizyQ/company-logo_200_200/B4EZretkWQHgAI-/0/1764673079265/crdit_agricole_normandie_logo?e=1790812800&v=beta&t=p5cZzLhrA1lpxusLP_jN-9DNfZ1G4Fhbr84v4IQdW0g"
+          },
+          "id": "7444407858827288576",
+          "is_repost": false,
+          "parsed_datetime": "2026-03-30T15:39:03.954Z"
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:activity:7435279514454364160",
+          "share_url": "https://www.linkedin.com/posts/g%C3%A9rald-gregoire_en-2025-laventure-ne-faisait-que-commencer-activity-7435279514454364160-EovN?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "6mo",
+          "comment_counter": 0,
+          "impressions_counter": 0,
+          "reaction_counter": 571,
+          "repost_counter": 18,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "En 2025, l’aventure ne faisait que commencer… Et dans quelques jours, elle reprend ! \n\nLa deuxième saison de la Kings League en France démarre le 22 mars, avec une nouveauté de taille que j'ai le plaisir de partager avec vous : la Kings League France devient la « Kings League Crédit Agricole France ⚽🔥\n\nVous le savez, le Groupe Crédit Agricole soutient le foot depuis plus de 50 ans. Des amateurs aux internationaux, des terrains traditionnels aux nouveaux espaces numériques, nous croyons en la capacité unique de ce sport à rassembler, à innover et à créer du lien.\n\nLa Kings League incarne précisément ces évolutions : un football plus interactif, plus digital, plus en phase avec les nouveaux usages du divertissement.\n\nRenouveler notre partenariat avec la Kings League en France et lui associer notre nom, c’est réaffirmer notre volonté d’accompagner les nouvelles déclinaisons de ce sport qui nous passionne et de renforcer notre lien avec les jeunes générations. \n\nAprès une première saison à succès, nous sommes impatients de vivre cette nouvelle saison aux côtés des joueurs, des équipes et des fans !\n\nEt vous ? Prêts pour le 22 ? 😉 \n\nJean-Pierre Gaillard Karine Bourguignon Odet Triquet Benoit Fayol Laurent Fromageau Nicolas DENIS Laurent MARTIN Sieglinde Sire Florence BURDIN Pierre Metge Arnauld ANDRE Bertrand SCHAEFER Julie de La Palme Irène Bloch",
+          "mentions": [
+            {
+              "url": "https://www.linkedin.com/company/kings-league-kosmos/",
+              "length": 12,
+              "start": 112
+            },
+            {
+              "url": "https://www.linkedin.com/company/credit-agricole/",
+              "length": 22,
+              "start": 322
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAABpgyEgByWlwr9JEDlKuLPda9EQdLzq2jUc",
+              "length": 20,
+              "start": 1146
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAEHALFIBxJv3xIYQhvBz0_yYTElxQ8J1IIc",
+              "length": 18,
+              "start": 1167
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAC54Fz4BRcykuEoQL5zIt9MZxeZcg3in4sM",
+              "length": 12,
+              "start": 1186
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAC5GYp0BQuArqfpQrxa_7NehjX7x0IxX-_c",
+              "length": 12,
+              "start": 1199
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAA6ojQoBu2kdLe4aij_f_9cxMKP2HrTMadQ",
+              "length": 17,
+              "start": 1212
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAB0b39oB69oKacG24Iq-dv7tGpfRiYh05jo",
+              "length": 13,
+              "start": 1230
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAABSbHGcB2f8FHg7FSA4_rVaGdSf9x-Vy_TE",
+              "length": 14,
+              "start": 1244
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAAeUQekBqukSWXigLSZ4vVEn8fVHH0i-cOE",
+              "length": 14,
+              "start": 1259
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAAj7EuABZ4q3URHWwF01XqNzM4ebvOzc0_Q",
+              "length": 15,
+              "start": 1274
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAAKGb5gBPeoFr1UqM_II30cAZiWcW0aSVGQ",
+              "length": 12,
+              "start": 1290
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAA02fSEBAU_MAIey3P9TmA4tq-BDgLTOcPU",
+              "length": 13,
+              "start": 1303
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAAGSGx4BI7aGWs0A2HJbhCLO_rVYLtpwysA",
+              "length": 17,
+              "start": 1317
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAAJ04XUBd5B9kx7NjW8DCqHsBt4hLODU9k8",
+              "length": 17,
+              "start": 1335
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAAZclScBO177_ot-xQeIvjvbASTmncry3GY",
+              "length": 11,
+              "start": 1353
+            }
+          ],
+          "attachments": [
+            {
+              "id": "D4E10AQHlkvhoCFeqRQ",
+              "sticker": false,
+              "size": {
+                "height": 279,
+                "width": 480
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4E10AQHlkvhoCFeqRQ/image-shrink_480/B4EZy9rUccJsAQ-/0/1772708776019?e=1789563600&v=beta&t=7n374fi8IHRXCdyi4bbHcPSWLsI-e8JEeGub_qlqWeM"
+            }
+          ],
+          "author": {
+            "public_identifier": "g%C3%A9rald-gregoire",
+            "id": "ACoAAAY_0hwBUsMYzVa7GoB3ZNRVFW_OqByjwWg",
+            "name": "Gerald Gregoire",
+            "is_company": false,
+            "headline": "Deputy Managing Director of Crédit Agricole S.A. / Client and Development division",
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E03AQHDvsuXnvH7eQ/profile-displayphoto-scale_400_400/B4EZndyC.SIQAg-/0/1760362512234?e=1790812800&v=beta&t=TNqz9h5ANAT4PZMJFdeLhX8zOm2m3NMxHUx3uznH-Hc"
+          },
+          "id": "7435279514454364160",
+          "is_repost": true,
+          "repost_id": "7443289304128258048",
+          "parsed_datetime": "2026-03-05T11:06:17.059Z",
+          "repost_parsed_datetime": "2026-03-27T13:34:19.732Z",
+          "reposted_by": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true
+          }
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:ugcPost:7442966850008727553",
+          "share_url": "https://www.linkedin.com/posts/olivier-borel-0201a0367_lassembl%C3%A9e-g%C3%A9n%C3%A9rale-le-c%C5%93ur-battant-de-ugcPost-7442966850008727553-aT8e?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "5mo",
+          "comment_counter": 0,
+          "impressions_counter": 0,
+          "reaction_counter": 213,
+          "repost_counter": 16,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "L'Assemblée Générale : le cœur battant de notre coopérative\n \nAujourd'hui, nous avons vécu un moment essentiel de notre vie coopérative : l'Assemblée Générale de la Caisse Régionale du Crédit Agricole Normandie.\nBien au-delà d'une obligation statutaire, c'est l'incarnation vivante de notre différence, d'un modèle où chaque voix compte et où la proximité n'est pas un slogan mais une réalité quotidienne.\n\nMa conviction est claire : dans un monde qui se digitalise à grande vitesse, ce sont l'humain et notre ancrage territorial qui feront la différence.\nOui, nous accélérons notre transformation digitale pour plus d'efficacité et de réactivité. Mais notre vraie force réside ailleurs, dans notre présence aux côtés de nos clients, et dans notre utilité au territoire.\nLe Crédit Agricole Normandie n'est pas qu'une banque. Nous sommes un acteur local profondément engagé pour l'avenir de la Normandie.\nNous avons eu l'honneur d'accueillir Valérie Baudson, Directrice générale d'Amundi et membre du Comité Exécutif de Crédit Agricole S.A., qui nous a présenté l’importance d’Amundi en tant que leader européen de la gestion d'actifs. Ces échanges riches ont permis de nourrir nos réflexions collectives.\n\nMerci à nos administrateurs et à tous nos collaborateurs pour leur engagement sans faille. Avec vous, nous construisons une Caisse Régionale fidèle à ses valeurs : proximité, responsabilité, solidarité.\n\nEnsemble, nous écrivons l'avenir de la Normandie. 🌾",
+          "mentions": [
+            {
+              "url": "https://www.linkedin.com/company/cr%C3%A9dit-agricole-normandie/",
+              "length": 25,
+              "start": 185
+            },
+            {
+              "url": "https://www.linkedin.com/company/cr%C3%A9dit-agricole-normandie/",
+              "length": 25,
+              "start": 774
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAAGbp0YBqT_5Q2uz7OJaors50wg69hy7HYQ",
+              "length": 15,
+              "start": 941
+            },
+            {
+              "url": "https://www.linkedin.com/company/amundi-/",
+              "length": 6,
+              "start": 980
+            }
+          ],
+          "attachments": [
+            {
+              "id": "D4E22AQGtiafPfrsm5A",
+              "sticker": false,
+              "size": {
+                "height": 471,
+                "width": 800
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4E22AQGtiafPfrsm5A/feedshare-shrink_800/B4EZ0q66BKJ0Ag-/0/1774541578990?e=1790812800&v=beta&t=_6gkes4ilTUZ9WdxCGEe3mDuxjnFtfiCvjK3YRO0DVc"
+            },
+            {
+              "id": "D4E22AQG3oeu82WXyjA",
+              "sticker": false,
+              "size": {
+                "height": 452,
+                "width": 800
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4E22AQG3oeu82WXyjA/feedshare-shrink_800/B4EZ0q658AJAAc-/0/1774541578379?e=1790812800&v=beta&t=CaCrp_A9w9fVmS9Ff-teWONmBix15REhn-_CVPWc7xA"
+            },
+            {
+              "id": "D4E22AQGngSglRSLprw",
+              "sticker": false,
+              "size": {
+                "height": 463,
+                "width": 800
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D4E22AQGngSglRSLprw/feedshare-shrink_800/B4EZ0q66DLI8Ag-/0/1774541579135?e=1790812800&v=beta&t=d6pMRsPSVi5JXOnbH1rQxhQdfcFo2Ob8xP3mpun8_OM"
+            }
+          ],
+          "author": {
+            "public_identifier": "olivier-borel-0201a0367",
+            "id": "ACoAAFr5ZhgBuC8_lC73fdFgw0QteI0N4gmwoAQ",
+            "name": "Olivier Borel",
+            "is_company": false,
+            "headline": "Président du conseil d’administration chez Crédit Agricole Normandie",
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E03AQEcCi4qnMRDDw/profile-displayphoto-shrink_400_400/B4EZb4PgqUGQAg-/0/1747921538348?e=1790812800&v=beta&t=GWBe4VrZmkCajdrrdW_hMUJnWehaxB2jwdiQd1g6WzY"
+          },
+          "id": "7442966850008727553",
+          "is_repost": true,
+          "repost_id": "7442967108348661760",
+          "parsed_datetime": "2026-03-26T16:13:00.679Z",
+          "repost_parsed_datetime": "2026-03-26T16:14:02.272Z",
+          "reposted_by": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true
+          }
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:ugcPost:7442610792820072448",
+          "share_url": "https://www.linkedin.com/posts/cr%C3%A9dit-agricole-normandie_vous-%C3%AAtes-dirigeant-dentreprise-ou-directeur-activity-7442610923145621506-0hU2?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "5mo",
+          "comment_counter": 0,
+          "impressions_counter": 0,
+          "reaction_counter": 46,
+          "repost_counter": 19,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "Vous êtes dirigeant d’entreprise ou directeur des Ressources Humaines en Normandie ? Découvrez la Banque des Ressources Humaines, la solution sur mesure du Crédit Agricole Normandie pour attirer et fidéliser vos collaborateurs 🤝\n\nIntéressé(e) ? Les rendez-vous, c'est par ici 👉  : https://lnkd.in/eKPUN8kQ",
+          "mentions": [],
+          "attachments": [
+            {
+              "type": "video",
+              "gif": false,
+              "id": "D4E05AQFT0Oo66kHG5g",
+              "size": {
+                "height": 720,
+                "width": 720
+              },
+              "unavailable": false,
+              "url": "https://dms.licdn.com/playlist/vid/v2/D4E05AQFT0Oo66kHG5g/mp4-720p-30fp-crf28/B4EZ0l3IQfIsCI-/0/1774456714873?e=1789563600&v=beta&t=DE2Wk9LSomctf1OszKuwFMbSc_js805ZoWzCkWA6hhg"
+            }
+          ],
+          "author": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true,
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E0BAQEYw4X1XTizyQ/company-logo_200_200/B4EZretkWQHgAI-/0/1764673079265/crdit_agricole_normandie_logo?e=1790812800&v=beta&t=p5cZzLhrA1lpxusLP_jN-9DNfZ1G4Fhbr84v4IQdW0g"
+          },
+          "id": "7442610923145621506",
+          "is_repost": false,
+          "parsed_datetime": "2026-03-25T16:38:41.102Z"
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:ugcPost:7440709951897010176",
+          "share_url": "https://www.linkedin.com/posts/cr%C3%A9dit-agricole-normandie_agirchaquejour-agriculture-normandie-activity-7440714781285629952-Mea8?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "5mo",
+          "comment_counter": 0,
+          "impressions_counter": 0,
+          "reaction_counter": 80,
+          "repost_counter": 21,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "Au Crédit Agricole, on agit chaque jour pour l’avenir de l’agriculture française.\n\nC’est compliqué d’être agriculteur. Pas besoin de s’appeler Crédit Agricole pour savoir ça. \nC’est compliqué. Et pourtant, c’est essentiel.\nParce qu’ils nourrissent la France, les agriculteurs sont indispensables. Préserver leur métier, c’est défendre notre souveraineté alimentaire et l’avenir de tous.\nAu Crédit Agricole Normandie, on s’implique dès la formation en soutenant les jeunes agriculteurs et les lycées agricoles du territoire. \nEt quand vient le moment de s’installer, au Crédit Agricole, on fait tout pour que les nouveaux agriculteurs démarrent dans les meilleures conditions.\nCette année, au Crédit Agricole Normandie, nos 85 conseillers sur le terrain ont permis à 275 nouveaux agriculteurs de bénéficier d’un financement adapté grâce au Coup de Pouce Installation.\nll faut préserver la transmission des savoir-faire : chaque année, grâce aux Cafés de l’Installation et aux réunions sur la Transmission, le Crédit Agricole Normandie et ses partenaires permettent aux agriculteurs de rencontrer toutes les expertises nécessaires pour accompagner leur projet d’installation ou préparer la transmission, partager les savoir-faire, et assurer la pérennité des exploitations, génération après génération.\nL’installation et le renouvellement des générations nous concernent tous. \n\nAu Crédit Agricole, on agit chaque jour pour l’avenir de l’agriculture française.\nSinon, on s’appellerait autrement.\n\n#AgirChaqueJour #Agriculture #Normandie #jeunesInstalles #EnsembleOnYarrivera",
+          "mentions": [
+            {
+              "url": "https://www.linkedin.com/company/cr%C3%A9dit-agricole-normandie/",
+              "length": 25,
+              "start": 390
+            }
+          ],
+          "attachments": [
+            {
+              "type": "video",
+              "gif": false,
+              "id": "D4E05AQFxmAhdK9iNcQ",
+              "size": {
+                "height": 720,
+                "width": 1280
+              },
+              "unavailable": false,
+              "url": "https://dms.licdn.com/playlist/vid/v2/D4E05AQFxmAhdK9iNcQ/mp4-720p-30fp-crf28/B4EZ0K2YpHHgCM-/0/1774003525567?e=1789563600&v=beta&t=wy5CyKke-Rs2OE6D_Ncm-cPKEvmY9cLaWq25crDOUgw"
+            }
+          ],
+          "author": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true,
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E0BAQEYw4X1XTizyQ/company-logo_200_200/B4EZretkWQHgAI-/0/1764673079265/crdit_agricole_normandie_logo?e=1790812800&v=beta&t=p5cZzLhrA1lpxusLP_jN-9DNfZ1G4Fhbr84v4IQdW0g"
+          },
+          "id": "7440714781285629952",
+          "is_repost": false,
+          "parsed_datetime": "2026-03-20T11:04:05.654Z"
+        },
+        {
+          "object": "Post",
+          "provider": "LINKEDIN",
+          "social_id": "urn:li:activity:7435714196903874560",
+          "share_url": "https://www.linkedin.com/posts/cr%C3%A9dit-agricole-normandie_lesprit-d%C3%A9quipe-sur-le-terrain-aussi-activity-7435714196903874560-VS6k?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFr5VBcBLByQ8o8zKRc4qMgXDQoUec6jWQY",
+          "date": "6mo",
+          "comment_counter": 0,
+          "impressions_counter": 0,
+          "reaction_counter": 142,
+          "repost_counter": 2,
+          "permissions": {
+            "can_post_comments": true,
+            "can_react": true,
+            "can_share": true
+          },
+          "text": "🏀 L'esprit d'équipe, sur le terrain aussi !\n\nCette semaine, des collaborateurs du Crédit Agricole Normandie ont participé au 2ème tournoi partenaires du Caen Basket Calvados - CBC.\n\nCes moments partagés nous rappellent combien le collectif, l'engagement et le jeu collectif font partie de notre ADN.\n\nNous sommes fiers d'être partenaire de ce club qui fait vivre le sport sur notre territoire, et de voir nos collaborateurs porter ces valeurs jusque sur le terrain !\n\n🤝 Merci au Caen Basket Calvados - CBC pour cet événement, et bravo à l'équipe pour cette 2ème place 🥈 \n\nJulie Raoult\nArmelle FREBOURG Elodie LANDAIS Christophe Pierre Dit Cudorge Damien GALÈRE Antoine Schiebold BIDEAU Simon",
+          "mentions": [
+            {
+              "url": "https://www.linkedin.com/company/cr%C3%A9dit-agricole-normandie/",
+              "length": 25,
+              "start": 82
+            },
+            {
+              "url": "https://www.linkedin.com/company/caen-basket-calvados/",
+              "length": 26,
+              "start": 153
+            },
+            {
+              "url": "https://www.linkedin.com/company/caen-basket-calvados/",
+              "length": 26,
+              "start": 479
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAC33CgQBvMH8ZjWR_toJ6mpYzWsjDPt9ekk",
+              "length": 12,
+              "start": 572
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAACyz6VQBu6-P5Ysw1ZfN33cvbJImrhV9PDU",
+              "length": 16,
+              "start": 585
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAACvKdskB3mLWJps1orFfcTjsyvzZ53egUCI",
+              "length": 14,
+              "start": 602
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAACc7iLEBWGspjaNiHROZHnRVW4Ud3cZjn_c",
+              "length": 13,
+              "start": 647
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAAE3mEGoBvZ_cFUzHPxh1Y6UfqDz1plTOixY",
+              "length": 17,
+              "start": 661
+            },
+            {
+              "url": "https://www.linkedin.com/in/ACoAACC-Y68B-1PaCFSk8kLvSnaxXSuhxsExM1k",
+              "length": 12,
+              "start": 679
+            }
+          ],
+          "attachments": [
+            {
+              "id": "D5622AQE3OPPyK3SAxw",
+              "sticker": false,
+              "size": {
+                "height": 600,
+                "width": 800
+              },
+              "unavailable": false,
+              "type": "img",
+              "url": "https://media.licdn.com/dms/image/v2/D5622AQE3OPPyK3SAxw/feedshare-shrink_800/B56ZzD2qLmJQAk-/0/1772812412026?e=1790812800&v=beta&t=WWCYQmInCA9qVmWDVtDhANcIs-38w_YCQ-LKz_6PCqU"
+            }
+          ],
+          "author": {
+            "public_identifier": "cr%C3%A9dit-agricole-normandie",
+            "id": "10017660",
+            "name": "Crédit Agricole Normandie",
+            "is_company": true,
+            "profile_picture_url": "https://media.licdn.com/dms/image/v2/D4E0BAQEYw4X1XTizyQ/company-logo_200_200/B4EZretkWQHgAI-/0/1764673079265/crdit_agricole_normandie_logo?e=1790812800&v=beta&t=p5cZzLhrA1lpxusLP_jN-9DNfZ1G4Fhbr84v4IQdW0g"
+          },
+          "id": "7435714196903874560",
+          "is_repost": false,
+          "parsed_datetime": "2026-03-06T15:53:33.431Z"
+        }
+      ],
+      "cursor": "eyJwYWdpbmF0aW9uX3Rva2VuIjoiMTUyNjI4OTQzMS0xNzg4OTU3MjkzNjE2LTQ0YzUyYjk3NjA2NWFiYzM3MjgxZjA5Mjk5YzMwZTFmIiwic3RhcnQiOjIwfQ==",
+      "paging": {
+        "page_count": 20
+      }
+    }
+  ]
+}

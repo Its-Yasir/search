@@ -17,6 +17,8 @@ import {
   Check,
   X,
   Loader2,
+  Target,
+  Link2,
 } from "lucide-react";
 
 interface SidebarProps {
@@ -132,6 +134,32 @@ export function Sidebar({
             >
               <Search className="h-4 w-4 shrink-0" />
               {!collapsed && <span>Social & Web Search</span>}
+            </Link>
+
+            <Link
+              href="/analyze"
+              className={`flex items-center gap-2.5 rounded-lg px-2.5 py-1.5 text-xs font-medium transition-colors ${
+                pathname === "/analyze"
+                  ? "text-zinc-900 bg-zinc-100/90 dark:bg-zinc-900 dark:text-zinc-100 font-semibold"
+                  : "text-zinc-600 hover:bg-zinc-50 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-900/60 dark:hover:text-zinc-200"
+              } ${collapsed ? "justify-center px-0" : ""}`}
+              title="Analyze & Leads"
+            >
+              <Target className="h-4 w-4 shrink-0 text-emerald-500" />
+              {!collapsed && <span>Analyze & Leads</span>}
+            </Link>
+
+            <Link
+              href="/add"
+              className={`flex items-center gap-2.5 rounded-lg px-2.5 py-1.5 text-xs font-medium transition-colors ${
+                pathname === "/add"
+                  ? "text-zinc-900 bg-zinc-100/90 dark:bg-zinc-900 dark:text-zinc-100 font-semibold"
+                  : "text-zinc-600 hover:bg-zinc-50 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-900/60 dark:hover:text-zinc-200"
+              } ${collapsed ? "justify-center px-0" : ""}`}
+              title="Add Profile URLs"
+            >
+              <Link2 className="h-4 w-4 shrink-0" />
+              {!collapsed && <span>Add Profile URLs</span>}
             </Link>
           </nav>
 
