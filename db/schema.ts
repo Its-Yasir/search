@@ -1,5 +1,6 @@
 import { pgTable, text, timestamp, uuid, integer, pgEnum, boolean, jsonb } from "drizzle-orm/pg-core";
-import { relations, sql } from "drizzle-orm";
+import { sql } from "drizzle-orm";
+import { relations } from "drizzle-orm";
 
 export const users = pgTable("users", {
   id: uuid("id").defaultRandom().primaryKey(),
@@ -130,6 +131,76 @@ export const companyEvents = pgTable("company_events", {
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
+export const entityTypeEnum = pgEnum("entity_type", ["person", "company"]);
+
+export const whoToContact = pgTable("who_to_contact", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  eventId: uuid("event_id")
+    .notNull()
+    .references(() => companyEvents.id, { onDelete: "cascade" }),
+  entityType: text("entity_type"),
+  connectMethod: text("connect_method"),
+  seniority: text("seniority")
+    .array()
+    .default(sql`ARRAY[]::text[]`),
+  role: text("role")
+    .array()
+    .default(sql`ARRAY[]::text[]`),
+  extraInfo: text("extra_info"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
+
+export const leadInfo = pgTable("lead_info", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  eventId: uuid("event_id")
+    .notNull()
+    .references(() => companyEvents.id, { onDelete: "cascade" }),
+  industry: text("industry")
+    .array()
+    .default(sql`ARRAY[]::text[]`),
+  geography: text("geography")
+    .array()
+    .default(sql`ARRAY[]::text[]`),
+  type: entityTypeEnum("type"),
+  title: text("title")
+    .array()
+    .default(sql`ARRAY[]::text[]`),
+  companySize: integer("company_size")
+    .array()
+    .default(sql`ARRAY[]::integer[]`),
+  didTheyAsk: text("did_they_ask"),
+  advantageProviding: text("advantage_providing"),
+  painPoint: text("pain_point"),
+  requirements: text("requirements"),
+  expiration: timestamp("expiration"),
+  otherUsefulResources: text("other_useful_resources"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
+
+export const icpInfo = pgTable("icp_info", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  eventId: uuid("event_id")
+    .notNull()
+    .references(() => companyEvents.id, { onDelete: "cascade" }),
+  industry: text("industry")
+    .array()
+    .default(sql`ARRAY[]::text[]`),
+  geography: text("geography")
+    .array()
+    .default(sql`ARRAY[]::text[]`),
+  type: entityTypeEnum("type"),
+  title: text("title")
+    .array()
+    .default(sql`ARRAY[]::text[]`),
+  companySize: integer("company_size")
+    .array()
+    .default(sql`ARRAY[]::integer[]`),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
+
 export const queries = pgTable("queries", {
   id: uuid("id").defaultRandom().primaryKey(),
   specificIcpId: uuid("specific_icp_id")
@@ -230,7 +301,7 @@ export const companyPostsRelations = relations(companyPosts, ({ one, many }) => 
   events: many(companyEvents),
 }));
 
-export const companyEventsRelations = relations(companyEvents, ({ one }) => ({
+export const companyEventsRelations = relations(companyEvents, ({ one, many }) => ({
   companyDetail: one(companyDetails, {
     fields: [companyEvents.companyDetailId],
     references: [companyDetails.id],
@@ -242,6 +313,30 @@ export const companyEventsRelations = relations(companyEvents, ({ one }) => ({
   user: one(users, {
     fields: [companyEvents.userId],
     references: [users.id],
+  }),
+  whoToContacts: many(whoToContact),
+  leadInfos: many(leadInfo),
+  icpInfos: many(icpInfo),
+}));
+
+export const whoToContactRelations = relations(whoToContact, ({ one }) => ({
+  event: one(companyEvents, {
+    fields: [whoToContact.eventId],
+    references: [companyEvents.id],
+  }),
+}));
+
+export const leadInfoRelations = relations(leadInfo, ({ one }) => ({
+  event: one(companyEvents, {
+    fields: [leadInfo.eventId],
+    references: [companyEvents.id],
+  }),
+}));
+
+export const icpInfoRelations = relations(icpInfo, ({ one }) => ({
+  event: one(companyEvents, {
+    fields: [icpInfo.eventId],
+    references: [companyEvents.id],
   }),
 }));
 
@@ -272,3 +367,11 @@ export type NewCompanyPost = typeof companyPosts.$inferInsert;
 export type CompanyEvent = typeof companyEvents.$inferSelect;
 export type NewCompanyEvent = typeof companyEvents.$inferInsert;
 
+export type WhoToContact = typeof whoToContact.$inferSelect;
+export type NewWhoToContact = typeof whoToContact.$inferInsert;
+
+export type LeadInfo = typeof leadInfo.$inferSelect;
+export type NewLeadInfo = typeof leadInfo.$inferInsert;
+
+export type IcpInfo = typeof icpInfo.$inferSelect;
+export type NewIcpInfo = typeof icpInfo.$inferInsert;
