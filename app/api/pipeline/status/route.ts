@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getSession } from "@/lib/auth";
 import { pipelineManager } from "@/lib/pipeline/manager";
+import { checkLinkedInDailyLimit } from "@/lib/pipeline/limit";
 import { db } from "@/db";
 import { profileUrls, companyEvents, companyDetails, companyPosts } from "@/db/schema";
 import { eq, and, desc, count } from "drizzle-orm";
@@ -57,6 +58,9 @@ export async function GET() {
       )
       .where(eq(companyDetails.userId, session.userId));
 
+    // Query LinkedIn daily quota limit status (100 company profiles / 24 hours)
+    const linkedinQuota = await checkLinkedInDailyLimit(session.userId);
+
     // If recentEvents in memory is empty, fetch the top 200 from DB
     let events = state.recentEvents;
     if (events.length === 0) {
@@ -72,6 +76,7 @@ export async function GET() {
       success: true,
       data: {
         ...state,
+        linkedinQuota,
         recentEvents: events,
         overview: {
           totalUrls: totalUrlsRes?.count || 0,

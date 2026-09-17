@@ -4,6 +4,9 @@ import {
   companyDetails,
   companyPosts,
   companyEvents,
+  whoToContact,
+  icpInfo,
+  leadInfo,
   CompanyEvent,
 } from "@/db/schema";
 import { eq, and, desc } from "drizzle-orm";
@@ -13,7 +16,12 @@ import {
   fetchCompanyPostsLastTwoMonths,
 } from "@/lib/linkedin/company";
 import { evaluatePostForB2BEvents } from "@/lib/ai/eventEvaluator";
+import { enrichCompanyEvent } from "@/lib/ai/eventEnricher";
 import { isRateLimitError } from "@/lib/pipeline/errors";
+import {
+  checkLinkedInDailyLimit,
+  LinkedInDailyLimitStatus,
+} from "@/lib/pipeline/limit";
 
 export interface PipelineLogEntry {
   id: string;
@@ -42,6 +50,7 @@ export interface PipelineState {
   } | null;
   logs: PipelineLogEntry[];
   recentEvents: CompanyEvent[];
+  linkedinQuota?: LinkedInDailyLimitStatus | null;
 }
 
 class PipelineManager {
@@ -58,6 +67,7 @@ class PipelineManager {
     countdown: null,
     logs: [],
     recentEvents: [],
+    linkedinQuota: null,
   };
 
   private abortController: AbortController | null = null;
@@ -135,6 +145,18 @@ class PipelineManager {
   public async start(userId: string): Promise<{ success: boolean; message: string }> {
     if (this.isProcessing || this.state.status === "running") {
       return { success: false, message: "Pipeline is already running." };
+    }
+
+    // Pre-flight check: LinkedIn 24h company profile quota (100 per day limit)
+    const initialQuota = await checkLinkedInDailyLimit(userId);
+    this.state.linkedinQuota = initialQuota;
+
+    if (initialQuota.limitReached) {
+      const limitMsg =
+        initialQuota.message ||
+        "LinkedIn daily limit reached: 100 company profiles have been fetched in the last 24 hours. The pipeline was stopped to protect your LinkedIn account.";
+      this.addLog(`🛑 ${limitMsg}`, "warning");
+      return { success: false, message: limitMsg };
     }
 
     this.abortController = new AbortController();
@@ -232,6 +254,20 @@ class PipelineManager {
         const row = pendingUrls[i];
         const rawIdentifier = extractCompanyIdentifier(row.url);
 
+        // Check LinkedIn daily quota (100 company profiles in 24h) before fetching profile
+        const quotaBefore = await checkLinkedInDailyLimit(userId);
+        this.state.linkedinQuota = quotaBefore;
+
+        if (quotaBefore.limitReached) {
+          const limitMsg =
+            quotaBefore.message ||
+            `LinkedIn daily limit reached: ${quotaBefore.used}/100 company profiles fetched in the last 24 hours. Stopping pipeline to protect your account.`;
+          this.addLog(`🛑 ${limitMsg}`, "warning");
+          this.state.status = "idle";
+          this.isProcessing = false;
+          break;
+        }
+
         this.state.currentCompany = {
           url: row.url,
           identifier: rawIdentifier,
@@ -315,10 +351,15 @@ class PipelineManager {
                 location: profileData?.location,
                 logoUrl: profileData?.logo_url,
                 rawProfile: profileData?.raw || {},
+                lastFetchedAt: new Date(),
               })
               .returning({ id: companyDetails.id });
             companyDetailId = inserted[0].id;
           }
+
+          // Track quota after updating company details
+          const quotaAfterFetch = await checkLinkedInDailyLimit(userId);
+          this.state.linkedinQuota = quotaAfterFetch;
 
           // --- STEP 2: Fetch company posts for the last 2 months (60 days) ---
           this.state.currentCompany.stage = "Fetching posts (last 2 months)";
@@ -430,6 +471,125 @@ class PipelineManager {
                   .returning();
 
                 if (insertedEvent[0]) {
+                  // --- STEP 2b: Generate whoToContact, icpInfo, and leadInfo ---
+                  this.addLog(
+                    `🧠 Generating ICP & Lead Intelligence for "${evaluation.headline}"...`,
+                    "info"
+                  );
+
+                  try {
+                    const enrichment = await enrichCompanyEvent(
+                      {
+                        eventType: evaluation.eventType,
+                        headline: evaluation.headline,
+                        summary: evaluation.summary,
+                        targetEntities: evaluation.targetEntities,
+                        industrySector: evaluation.industrySector,
+                        leadOpportunity: evaluation.leadOpportunity,
+                        confidenceScore: evaluation.confidenceScore,
+                        postUrl: post.share_url || null,
+                        postDate: post.parsed_datetime
+                          ? new Date(post.parsed_datetime)
+                          : null,
+                      },
+                      {
+                        text: post.text,
+                        shareUrl: post.share_url || null,
+                        postedAt: post.parsed_datetime
+                          ? new Date(post.parsed_datetime)
+                          : null,
+                        reactionCounter: post.reaction_counter || 0,
+                        commentCounter: post.comment_counter || 0,
+                        repostCounter: post.repost_counter || 0,
+                      },
+                      {
+                        name: companyName,
+                        publicIdentifier: profileData?.public_identifier || rawIdentifier,
+                        description: profileData?.description || null,
+                        industry: profileData?.industry || null,
+                        websiteUrl: profileData?.website_url || null,
+                        employeeCount: profileData?.employee_count || null,
+                        location: profileData?.location || null,
+                        followersCount: profileData?.followers_count || null,
+                      }
+                    );
+
+                    // Insert whoToContact
+                    await db.insert(whoToContact).values({
+                      eventId: insertedEvent[0].id,
+                      entityType: enrichment.whoToContact.entityType,
+                      connectMethod: enrichment.whoToContact.connectMethod,
+                      seniority: enrichment.whoToContact.seniority,
+                      role: enrichment.whoToContact.role,
+                      extraInfo: enrichment.whoToContact.extraInfo,
+                    });
+
+                    // Insert icpInfo
+                    await db.insert(icpInfo).values({
+                      eventId: insertedEvent[0].id,
+                      industry: enrichment.icpInfo.industry,
+                      geography: enrichment.icpInfo.geography,
+                      type: enrichment.icpInfo.type,
+                      title: enrichment.icpInfo.title,
+                      companySize: enrichment.icpInfo.companySize,
+                    });
+
+                    // Insert leadInfo
+                    const parsedExpiration = enrichment.leadInfo.expiration
+                      ? new Date(enrichment.leadInfo.expiration)
+                      : null;
+                    const validExpiration =
+                      parsedExpiration && !isNaN(parsedExpiration.getTime())
+                        ? parsedExpiration
+                        : null;
+
+                    await db.insert(leadInfo).values({
+                      eventId: insertedEvent[0].id,
+                      industry: enrichment.leadInfo.industry,
+                      geography: enrichment.leadInfo.geography,
+                      type: enrichment.leadInfo.type,
+                      title: enrichment.leadInfo.title,
+                      companySize: enrichment.leadInfo.companySize,
+                      didTheyAsk: enrichment.leadInfo.didTheyAsk,
+                      advantageProviding: enrichment.leadInfo.advantageProviding,
+                      painPoint: enrichment.leadInfo.painPoint,
+                      requirements: enrichment.leadInfo.requirements,
+                      expiration: validExpiration,
+                      otherUsefulResources: enrichment.leadInfo.otherUsefulResources,
+                    });
+
+                    // Store enrichment inside rawAiOutput so real-time feeds can display it immediately
+                    const updatedRawAi = {
+                      ...(evaluation as unknown as Record<string, unknown>),
+                      enrichment,
+                    };
+                    await db
+                      .update(companyEvents)
+                      .set({ rawAiOutput: updatedRawAi })
+                      .where(eq(companyEvents.id, insertedEvent[0].id));
+
+                    insertedEvent[0].rawAiOutput = updatedRawAi;
+
+                    const rolesText =
+                      enrichment.whoToContact.role.slice(0, 2).join(", ") ||
+                      "Decision Maker";
+                    const expiryText = validExpiration
+                      ? ` | Deadline: ${validExpiration.toLocaleDateString()}`
+                      : "";
+                    this.addLog(
+                      `✨ ICP & Lead Intelligence saved for "${evaluation.headline}" (Contact: ${rolesText}${expiryText})`,
+                      "success"
+                    );
+                  } catch (enrichErr) {
+                    if (isRateLimitError(enrichErr)) {
+                      throw enrichErr;
+                    }
+                    this.addLog(
+                      `⚠️ Could not generate ICP/Lead info: ${(enrichErr as Error).message}`,
+                      "warning"
+                    );
+                  }
+
                   this.state.recentEvents = [
                     insertedEvent[0],
                     ...this.state.recentEvents.slice(0, 149),
@@ -456,6 +616,17 @@ class PipelineManager {
 
           this.state.companiesProcessed += 1;
           this.addLog(`✅ Completed processing for "${companyName}".`, "success");
+
+          // Stop pipeline if LinkedIn 24h limit of 100 was reached after processing this company
+          if (quotaAfterFetch.limitReached) {
+            this.addLog(
+              `🛑 LinkedIn daily limit reached: ${quotaAfterFetch.used}/100 company profiles fetched in the last 24 hours. Stopping pipeline to protect your LinkedIn account.`,
+              "warning"
+            );
+            this.state.status = "idle";
+            this.isProcessing = false;
+            break;
+          }
 
           // --- STEP 3: Human-like delay in MINUTES between LinkedIn/Unipile companies ---
           // Requirement: 2 to 3 minutes between tasks (120 to 180 seconds)
@@ -537,6 +708,11 @@ class PipelineManager {
       this.isProcessing = false;
       this.state.countdown = null;
       this.state.currentCompany = null;
+      try {
+        this.state.linkedinQuota = await checkLinkedInDailyLimit(userId);
+      } catch {
+        // Ignore quota query error in finally
+      }
     }
   }
 }

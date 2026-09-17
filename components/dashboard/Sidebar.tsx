@@ -19,6 +19,7 @@ import {
   Loader2,
   Target,
   Link2,
+  Compass,
 } from "lucide-react";
 
 interface SidebarProps {
@@ -121,6 +122,19 @@ export function Sidebar({
             >
               <LayoutDashboard className="h-4 w-4 shrink-0" />
               {!collapsed && <span>Dashboard</span>}
+            </Link>
+
+            <Link
+              href="/find"
+              className={`flex items-center gap-2.5 rounded-lg px-2.5 py-1.5 text-xs font-medium transition-colors ${
+                pathname === "/find"
+                  ? "text-zinc-900 bg-zinc-100/90 dark:bg-zinc-900 dark:text-zinc-100 font-semibold"
+                  : "text-zinc-600 hover:bg-zinc-50 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-900/60 dark:hover:text-zinc-200"
+              } ${collapsed ? "justify-center px-0" : ""}`}
+              title="Find Leads & ICP"
+            >
+              <Compass className="h-4 w-4 shrink-0 text-blue-500" />
+              {!collapsed && <span>Find Leads & ICP</span>}
             </Link>
 
             <Link

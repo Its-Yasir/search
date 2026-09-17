@@ -35,6 +35,12 @@ export default async function AnalyzePage() {
               Dashboard
             </a>
             <a
+              href="/find"
+              className="hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors"
+            >
+              Find Leads & ICP
+            </a>
+            <a
               href="/add"
               className="hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors"
             >

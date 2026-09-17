@@ -77,7 +77,7 @@ Your job is to analyze all of this context and produce THREE structured outputs:
 - advantageProviding: What competitive advantage does this event reveal for someone selling to them?
 - painPoint: What pain point or challenge does this event suggest they have?
 - requirements: What requirements, tools, or services might they need as a result of this event?
-- expiration: ISO date string for when this opportunity might expire or become stale (null if evergreen). Estimate based on event type — funding events are hot for ~3 months, product launches ~1 month, hiring ~2 months, etc.
+- expiration: ISO date string for when this opportunity expires. IMPORTANT: Add an expiry date ONLY if you are sure based on explicit date or deadline data directly stated in the post (e.g. application deadlines, limited-time offers, scheduled event dates, RFP closing dates). If the post does not specify an explicit expiration or deadline, return null. Do NOT guess, estimate, or extrapolate an expiration date.
 - otherUsefulResources: Any other relevant links, references, or context that could help with outreach.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -260,7 +260,14 @@ Based on all of the above, generate the whoToContact, icpInfo, and leadInfo outp
         advantageProviding: parsed.leadInfo?.advantageProviding || null,
         painPoint: parsed.leadInfo?.painPoint || null,
         requirements: parsed.leadInfo?.requirements || null,
-        expiration: parsed.leadInfo?.expiration || null,
+        expiration: (() => {
+          const raw = parsed.leadInfo?.expiration;
+          if (!raw || typeof raw !== "string") return null;
+          const lower = raw.trim().toLowerCase();
+          if (lower === "null" || lower === "none" || lower === "n/a") return null;
+          const d = new Date(raw);
+          return isNaN(d.getTime()) ? null : d.toISOString();
+        })(),
         otherUsefulResources: parsed.leadInfo?.otherUsefulResources || null,
       },
     };

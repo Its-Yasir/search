@@ -18,6 +18,10 @@ import {
   ChevronDown,
   ChevronUp,
   Calendar,
+  Compass,
+  ArrowRight,
+  ShieldAlert,
+  ShieldCheck,
 } from "lucide-react";
 import { CompanyEvent } from "@/db/schema";
 
@@ -48,6 +52,15 @@ interface PipelineStatusData {
   } | null;
   logs: PipelineLogEntry[];
   recentEvents: CompanyEvent[];
+  linkedinQuota?: {
+    limit: number;
+    used: number;
+    remaining: number;
+    limitReached: boolean;
+    resetsAt: string | null;
+    oldestFetchedAt: string | null;
+    message?: string;
+  } | null;
   overview?: {
     totalUrls: number;
     pendingUrls: number;
@@ -62,7 +75,10 @@ export function AnalyzePipelineView() {
   const [loading, setLoading] = useState(true);
   const [actionLoading, setActionLoading] = useState(false);
   const [activeFilter, setActiveFilter] = useState<string>("all");
-  const [timeframeFilter, setTimeframeFilter] = useState<"1m" | "2m" | "all">("all");
+  const [timeframeFilter, setTimeframeFilter] = useState<"1m" | "2m" | "all">(
+    "all",
+  );
+  const [now, setNow] = useState(() => Date.now());
   const [showLogs, setShowLogs] = useState(true);
 
   const fetchStatus = useCallback(async () => {
@@ -71,6 +87,7 @@ export function AnalyzePipelineView() {
       const json = await res.json();
       if (json.success && json.data) {
         setData(json.data);
+        setNow(Date.now());
       }
     } catch (err) {
       console.error("Failed to poll pipeline status:", err);
@@ -88,6 +105,7 @@ export function AnalyzePipelineView() {
         const json = await res.json();
         if (active && json.success && json.data) {
           setData(json.data);
+          setNow(Date.now());
         }
       } catch (err) {
         console.error("Failed to poll pipeline status:", err);
@@ -107,7 +125,19 @@ export function AnalyzePipelineView() {
     };
   }, []);
 
+  const isRunning = data?.status === "running";
+  const isStopping = data?.status === "stopping";
+  const isQuotaExceeded = !!data?.linkedinQuota?.limitReached;
+
   const handleStart = async () => {
+    if (isQuotaExceeded) {
+      alert(
+        data?.linkedinQuota?.message ||
+          "LinkedIn daily limit reached (100 company profiles fetched in the last 24 hours). The pipeline is paused to protect your LinkedIn account."
+      );
+      return;
+    }
+
     setActionLoading(true);
     try {
       const res = await fetch("/api/pipeline/start", { method: "POST" });
@@ -138,9 +168,6 @@ export function AnalyzePipelineView() {
       setActionLoading(false);
     }
   };
-
-  const isRunning = data?.status === "running";
-  const isStopping = data?.status === "stopping";
 
   const formatCountdown = (secs: number) => {
     const mins = Math.floor(secs / 60);
@@ -194,7 +221,6 @@ export function AnalyzePipelineView() {
       const eventDateVal = event.postDate || event.createdAt;
       const eventTime = new Date(eventDateVal).getTime();
       if (!isNaN(eventTime)) {
-        const now = Date.now();
         const diffDays = (now - eventTime) / (1000 * 60 * 60 * 24);
         if (timeframeFilter === "1m" && diffDays > 30) {
           return false;
@@ -275,9 +301,15 @@ export function AnalyzePipelineView() {
                   Stopping...
                 </span>
               )}
-              {data?.status === "idle" && (
+              {data?.status === "idle" && !isQuotaExceeded && (
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-700">
                   Idle
+                </span>
+              )}
+              {data?.status === "idle" && isQuotaExceeded && (
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20">
+                  <ShieldAlert className="h-3.5 w-3.5" />
+                  Daily Limit Reached
                 </span>
               )}
               {data?.status === "completed" && (
@@ -288,7 +320,8 @@ export function AnalyzePipelineView() {
               )}
             </div>
             <p className="text-xs text-zinc-500 dark:text-zinc-400">
-              Pacing: 2–3 minutes between company fetches (human delay), seconds for OpenAI post analysis. Bounded to last 2 months.
+              Pacing: 2–3 minutes between company fetches (human delay), seconds
+              for OpenAI post analysis. Limit: 100 company profiles per 24h.
             </p>
           </div>
 
@@ -297,7 +330,12 @@ export function AnalyzePipelineView() {
             {!isRunning ? (
               <button
                 onClick={handleStart}
-                disabled={actionLoading || isStopping}
+                disabled={actionLoading || isStopping || isQuotaExceeded}
+                title={
+                  isQuotaExceeded
+                    ? "LinkedIn daily limit reached (100 company profiles fetched in last 24h). Pipeline paused to protect account."
+                    : "Start automated company processing"
+                }
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium text-xs text-white bg-emerald-600 hover:bg-emerald-500 active:scale-98 transition shadow-sm disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
               >
                 <Play className="h-3.5 w-3.5 fill-current" />
@@ -319,10 +357,41 @@ export function AnalyzePipelineView() {
               className="p-2.5 rounded-xl border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition active:scale-95"
               title="Refresh status"
             >
-              <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
+              <RefreshCw
+                className={`h-4 w-4 ${loading ? "animate-spin" : ""}`}
+              />
             </button>
           </div>
         </div>
+
+        {/* LinkedIn Daily Safety Limit Exceeded Banner */}
+        {isQuotaExceeded && (
+          <div className="mt-6 rounded-xl border border-rose-200/80 dark:border-rose-900/50 bg-rose-500/10 dark:bg-rose-950/30 p-4">
+            <div className="flex items-start justify-between gap-4">
+              <div className="flex items-start gap-3">
+                <div className="h-8 w-8 rounded-lg bg-rose-500/20 flex items-center justify-center text-rose-600 dark:text-rose-400 shrink-0 mt-0.5">
+                  <ShieldAlert className="h-4 w-4" />
+                </div>
+                <div>
+                  <div className="text-xs font-semibold text-rose-900 dark:text-rose-300">
+                    LinkedIn Daily Safety Limit Reached (100 / 100 Company Profiles)
+                  </div>
+                  <div className="text-[11.5px] text-rose-700/90 dark:text-rose-400/90 mt-0.5 leading-relaxed">
+                    LinkedIn limits company profile lookups to ~100 per day. The pipeline is halted to protect your account from rate limits or restrictions.
+                    {data?.linkedinQuota?.resetsAt && (
+                      <span className="font-semibold block text-rose-800 dark:text-rose-300 mt-1">
+                        Next quota slot opens at {new Date(data.linkedinQuota.resetsAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })} ({new Date(data.linkedinQuota.resetsAt).toLocaleDateString()}).
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+              <span className="shrink-0 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-rose-500/20 text-rose-700 dark:text-rose-300 border border-rose-500/30">
+                100/100 Reached
+              </span>
+            </div>
+          </div>
+        )}
 
         {/* Live Human Delay Countdown Banner */}
         {data?.countdown?.active && (
@@ -337,7 +406,8 @@ export function AnalyzePipelineView() {
                     Human-like Jitter Interval in Progress
                   </div>
                   <div className="text-[11px] text-amber-700/80 dark:text-amber-400/80">
-                    {data.countdown.reason || "Simulating organic browsing interval"}
+                    {data.countdown.reason ||
+                      "Simulating organic browsing interval"}
                   </div>
                 </div>
               </div>
@@ -375,7 +445,7 @@ export function AnalyzePipelineView() {
       </div>
 
       {/* Metric Counters Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
         {/* Companies Processed */}
         <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950/80 p-5 shadow-xs">
           <div className="flex items-center justify-between text-zinc-500 dark:text-zinc-400 mb-2">
@@ -396,6 +466,78 @@ export function AnalyzePipelineView() {
           </p>
         </div>
 
+        {/* LinkedIn 24h Quota */}
+        <div
+          className={`rounded-2xl border p-5 shadow-xs transition ${
+            isQuotaExceeded
+              ? "border-rose-500/30 bg-rose-50/20 dark:bg-rose-950/10"
+              : (data?.linkedinQuota?.used || 0) >= 80
+              ? "border-amber-500/30 bg-amber-50/20 dark:bg-amber-950/10"
+              : "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950/80"
+          }`}
+        >
+          <div className="flex items-center justify-between text-zinc-500 dark:text-zinc-400 mb-2">
+            <span className="text-xs font-medium uppercase tracking-wider">
+              LinkedIn 24h Quota
+            </span>
+            <ShieldCheck
+              className={`h-4 w-4 ${
+                isQuotaExceeded
+                  ? "text-rose-500"
+                  : (data?.linkedinQuota?.used || 0) >= 80
+                  ? "text-amber-500"
+                  : "text-emerald-500"
+              }`}
+            />
+          </div>
+          <div className="flex items-baseline gap-2">
+            <span
+              className={`text-2xl font-bold font-mono ${
+                isQuotaExceeded
+                  ? "text-rose-600 dark:text-rose-400"
+                  : (data?.linkedinQuota?.used || 0) >= 80
+                  ? "text-amber-600 dark:text-amber-400"
+                  : "text-zinc-900 dark:text-zinc-100"
+              }`}
+            >
+              {data?.linkedinQuota?.used || 0} / {data?.linkedinQuota?.limit || 100}
+            </span>
+            <span className="text-xs text-zinc-400">profiles</span>
+          </div>
+          {/* Progress bar */}
+          <div className="w-full bg-zinc-100 dark:bg-zinc-800 rounded-full h-1.5 mt-2.5 overflow-hidden">
+            <div
+              className={`h-1.5 rounded-full transition-all duration-500 ${
+                isQuotaExceeded
+                  ? "bg-rose-500"
+                  : (data?.linkedinQuota?.used || 0) >= 80
+                  ? "bg-amber-500"
+                  : "bg-emerald-500"
+              }`}
+              style={{
+                width: `${Math.min(
+                  100,
+                  ((data?.linkedinQuota?.used || 0) /
+                    (data?.linkedinQuota?.limit || 100)) *
+                    100
+                )}%`,
+              }}
+            />
+          </div>
+          <p className="mt-2 text-[11px] text-zinc-400 flex items-center justify-between">
+            <span>
+              {isQuotaExceeded
+                ? "Daily limit reached"
+                : `${data?.linkedinQuota?.remaining ?? 100} remaining`}
+            </span>
+            {data?.linkedinQuota?.resetsAt && (
+              <span className="text-[10px] text-zinc-500">
+                Resets {new Date(data.linkedinQuota.resetsAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+              </span>
+            )}
+          </p>
+        </div>
+
         {/* Posts Read */}
         <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950/80 p-5 shadow-xs">
           <div className="flex items-center justify-between text-zinc-500 dark:text-zinc-400 mb-2">
@@ -413,7 +555,9 @@ export function AnalyzePipelineView() {
             <span className="text-xs text-zinc-400">posts</span>
           </div>
           <p className="mt-1 text-[11px] text-zinc-400">
-            {isRunning ? "Live batch progress (60-day filter)" : "Filtered with 60-day reverse-stop"}
+            {isRunning
+              ? "Live batch progress (60-day filter)"
+              : "Filtered with 60-day reverse-stop"}
           </p>
         </div>
 
@@ -429,7 +573,9 @@ export function AnalyzePipelineView() {
             <span className="text-2xl font-bold font-mono text-emerald-600 dark:text-emerald-400">
               {isRunning
                 ? data?.eventsFound || 0
-                : data?.overview?.totalEvents || data?.recentEvents?.length || 0}
+                : data?.overview?.totalEvents ||
+                  data?.recentEvents?.length ||
+                  0}
             </span>
             <span className="text-xs text-emerald-600/70 dark:text-emerald-400/70">
               signals
@@ -456,8 +602,12 @@ export function AnalyzePipelineView() {
                   : data?.overview?.totalPosts || data?.postsRead || 0;
                 const events = isRunning
                   ? data?.eventsFound || 0
-                  : data?.overview?.totalEvents || data?.recentEvents?.length || 0;
-                return posts > 0 ? `${Math.round((events / posts) * 100)}%` : "0%";
+                  : data?.overview?.totalEvents ||
+                    data?.recentEvents?.length ||
+                    0;
+                return posts > 0
+                  ? `${Math.round((events / posts) * 100)}%`
+                  : "0%";
               })()}
             </span>
             <span className="text-xs text-zinc-400">lead yield</span>
@@ -502,7 +652,10 @@ export function AnalyzePipelineView() {
                     <button
                       key={tf.id}
                       disabled={isRunning}
-                      onClick={() => setTimeframeFilter(tf.id as "1m" | "2m" | "all")}
+                      onClick={() => {
+                        setTimeframeFilter(tf.id as "1m" | "2m" | "all");
+                        setNow(Date.now());
+                      }}
                       className={`px-2.5 py-1 rounded-lg text-[11px] font-medium transition cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 ${
                         timeframeFilter === tf.id
                           ? "bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-xs"
@@ -566,7 +719,9 @@ export function AnalyzePipelineView() {
             <div className="space-y-4">
               {filteredEvents.map((event) => {
                 const badge = getEventTypeBadge(event.eventType);
-                const targets = (event.targetEntities as { name: string; role: string }[]) || [];
+                const targets =
+                  (event.targetEntities as { name: string; role: string }[]) ||
+                  [];
                 const postPublishedStr = formatPostDateTime(event.postDate);
                 const detectedStr = formatDetectedTime(event.createdAt);
 
@@ -603,7 +758,10 @@ export function AnalyzePipelineView() {
                         <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[10.5px] font-medium bg-blue-50/80 dark:bg-blue-950/30 text-blue-700 dark:text-blue-300 border border-blue-200/60 dark:border-blue-800/40">
                           <Calendar className="h-3 w-3 text-blue-500 shrink-0" />
                           <span>
-                            Post Published: <strong className="font-semibold">{postPublishedStr}</strong>
+                            Post Published:{" "}
+                            <strong className="font-semibold">
+                              {postPublishedStr}
+                            </strong>
                           </span>
                         </div>
                       )}
@@ -632,7 +790,9 @@ export function AnalyzePipelineView() {
                           >
                             <Building2 className="h-3 w-3 text-zinc-400" />
                             {t.name}
-                            <span className="text-zinc-400 text-[9px]">({t.role})</span>
+                            <span className="text-zinc-400 text-[9px]">
+                              ({t.role})
+                            </span>
                           </span>
                         ))}
                       </div>
@@ -652,6 +812,132 @@ export function AnalyzePipelineView() {
                         </div>
                       </div>
                     )}
+
+                    {/* Enriched ICP & Lead Intelligence Card */}
+                    {(() => {
+                      const rawAi =
+                        (event.rawAiOutput as Record<string, unknown>) || {};
+                      const enrichment = rawAi.enrichment as
+                        | {
+                            whoToContact?: {
+                              entityType?: string | null;
+                              connectMethod?: string | null;
+                              seniority?: string[];
+                              role?: string[];
+                              extraInfo?: string | null;
+                            };
+                            icpInfo?: {
+                              industry?: string[];
+                              geography?: string[];
+                              type?: string | null;
+                              title?: string[];
+                              companySize?: number[];
+                            };
+                            leadInfo?: {
+                              industry?: string[];
+                              geography?: string[];
+                              type?: string | null;
+                              title?: string[];
+                              companySize?: number[];
+                              didTheyAsk?: string | null;
+                              advantageProviding?: string | null;
+                              painPoint?: string | null;
+                              requirements?: string | null;
+                              expiration?: string | null;
+                              otherUsefulResources?: string | null;
+                            };
+                          }
+                        | undefined;
+
+                      if (!enrichment) return null;
+
+                      return (
+                        <div className="rounded-xl border border-blue-500/20 bg-blue-50/20 dark:bg-blue-950/10 p-3.5 space-y-2.5 text-xs">
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-1.5 font-semibold text-blue-950 dark:text-blue-200 text-[11px] uppercase tracking-wide">
+                              <Compass className="h-3.5 w-3.5 text-blue-500" />
+                              Extracted ICP & Lead Intelligence
+                            </div>
+                            {enrichment.leadInfo?.expiration && (
+                              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
+                                <Clock className="h-3 w-3 text-amber-500" />
+                                Deadline:{" "}
+                                {new Date(
+                                  enrichment.leadInfo.expiration,
+                                ).toLocaleDateString(undefined, {
+                                  month: "short",
+                                  day: "numeric",
+                                  year: "numeric",
+                                })}
+                              </span>
+                            )}
+                          </div>
+
+                          {/* Who to Contact & ICP Target */}
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
+                            {enrichment.whoToContact && (
+                              <div className="bg-white/80 dark:bg-zinc-900/60 rounded-lg p-2.5 border border-zinc-100 dark:border-zinc-800">
+                                <span className="text-[10px] font-medium text-zinc-400 block mb-0.5">
+                                  Recommended Contact:
+                                </span>
+                                <div className="font-medium text-zinc-800 dark:text-zinc-200">
+                                  {enrichment.whoToContact.role?.join(", ") ||
+                                    "Decision Maker"}
+                                </div>
+                                {enrichment.whoToContact.connectMethod && (
+                                  <div className="text-[10px] text-zinc-500 dark:text-zinc-400 mt-0.5">
+                                    Method:{" "}
+                                    {enrichment.whoToContact.connectMethod}
+                                  </div>
+                                )}
+                              </div>
+                            )}
+
+                            {enrichment.icpInfo && (
+                              <div className="bg-white/80 dark:bg-zinc-900/60 rounded-lg p-2.5 border border-zinc-100 dark:border-zinc-800">
+                                <span className="text-[10px] font-medium text-zinc-400 block mb-0.5">
+                                  Target ICP Persona:
+                                </span>
+                                <div className="font-medium text-zinc-800 dark:text-zinc-200">
+                                  {enrichment.icpInfo.title
+                                    ?.slice(0, 3)
+                                    .join(", ") || "Target Executives"}
+                                </div>
+                                {enrichment.icpInfo.industry &&
+                                  enrichment.icpInfo.industry.length > 0 && (
+                                    <div className="text-[10px] text-zinc-500 dark:text-zinc-400 mt-0.5">
+                                      Industries:{" "}
+                                      {enrichment.icpInfo.industry
+                                        .slice(0, 3)
+                                        .join(", ")}
+                                    </div>
+                                  )}
+                              </div>
+                            )}
+                          </div>
+
+                          {/* Pain point or requirements */}
+                          {enrichment.leadInfo?.painPoint && (
+                            <div className="text-[11px] text-zinc-600 dark:text-zinc-400 bg-white/60 dark:bg-zinc-900/40 p-2.5 rounded-lg border border-zinc-100 dark:border-zinc-800/60">
+                              <span className="font-medium text-zinc-700 dark:text-zinc-300">
+                                Identified Pain Point / Need:{" "}
+                              </span>
+                              {enrichment.leadInfo.painPoint}
+                            </div>
+                          )}
+
+                          <div className="pt-0.5 flex justify-end">
+                            <a
+                              href="/find"
+                              className="inline-flex items-center gap-1 text-[11px] font-medium text-blue-600 dark:text-blue-400 hover:underline"
+                            >
+                              Explore in Leads & ICP
+                              <ArrowRight className="h-3 w-3" />
+                            </a>
+                          </div>
+                        </div>
+                      );
+                    })()}
 
                     {/* Post Link */}
                     {event.postUrl && (
@@ -694,7 +980,7 @@ export function AnalyzePipelineView() {
           </div>
 
           {showLogs && (
-            <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-950 text-zinc-100 p-4 font-mono text-[11px] h-[580px] flex flex-col shadow-inner">
+            <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-950 text-zinc-100 p-4 font-mono text-[11px] h-145 flex flex-col shadow-inner">
               <div className="flex items-center justify-between pb-2 border-b border-zinc-800/80 mb-2 text-zinc-400 text-[10px]">
                 <span>STREAM LOGS</span>
                 <span>{data?.logs?.length || 0} entries</span>
@@ -708,14 +994,17 @@ export function AnalyzePipelineView() {
                 )}
                 {data?.logs?.map((log) => {
                   let color = "text-zinc-300";
-                  if (log.type === "event") color = "text-emerald-400 font-semibold";
+                  if (log.type === "event")
+                    color = "text-emerald-400 font-semibold";
                   else if (log.type === "success") color = "text-teal-300";
                   else if (log.type === "warning") color = "text-amber-400";
                   else if (log.type === "error") color = "text-rose-400";
 
                   return (
                     <div key={log.id} className="leading-tight">
-                      <span className="text-zinc-600 mr-2">[{log.timestamp}]</span>
+                      <span className="text-zinc-600 mr-2">
+                        [{log.timestamp}]
+                      </span>
                       <span className={color}>{log.message}</span>
                     </div>
                   );

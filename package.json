@@ -10,7 +10,10 @@
     "db:push": "drizzle-kit push",
     "db:generate": "drizzle-kit generate",
     "db:studio": "drizzle-kit studio",
-    "pipeline:run": "tsx scripts/process-companies-pipeline.ts"
+    "pipeline:run": "tsx scripts/process-companies-pipeline.ts",
+    "posts:fetch": "tsx scripts/fetch-people-posts.ts",
+    "search:linkedin": "tsx scripts/search-linkedin-serper.ts",
+    "profiles:fetch": "tsx scripts/fetch-company-profiles.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",

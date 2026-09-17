@@ -14,6 +14,17 @@ export async function POST() {
 
     const result = await pipelineManager.start(session.userId);
 
+    if (!result.success) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: result.message,
+          message: result.message,
+        },
+        { status: 400 }
+      );
+    }
+
     return NextResponse.json(result);
   } catch (err) {
     console.error("[API /api/pipeline/start] Error:", err);

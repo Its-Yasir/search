@@ -35,6 +35,12 @@ export default async function AddPage() {
               Dashboard
             </a>
             <a
+              href="/find"
+              className="hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors"
+            >
+              Find Leads & ICP
+            </a>
+            <a
               href="/add"
               className="text-zinc-900 dark:text-zinc-100 font-semibold transition-colors"
             >
