@@ -147,7 +147,7 @@ export async function fetchCompanyProfileFromUnipile(
 /**
  * Fetches a single page of posts for a company entity.
  */
-async function fetchCompanyPostsPage(
+export async function fetchCompanyPostsPage(
   entityId: string,
   cursor?: string | null,
   limit: number = 20,
@@ -197,6 +197,14 @@ async function fetchCompanyPostsPage(
           `Unipile Posts API rate limit exceeded (HTTP ${response.status}): ${errText}`,
           "unipile"
         );
+      }
+      if (response.status === 404 || response.status === 422) {
+        console.warn(
+          `⚠️ [Unipile] Posts endpoint returned HTTP ${response.status} (${
+            response.status === 422 ? "Unprocessable Entity" : "Not Found"
+          }) for entity "${entityId}". Skipping posts.`
+        );
+        return { items: [], cursor: null };
       }
       throw new Error(`Unipile Posts API HTTP ${response.status}: ${errText}`);
     }
@@ -313,6 +321,127 @@ export async function fetchCompanyPostsLastTwoMonths(
         });
       } else if (postTimestamp && postTimestamp < cutoffTimestamp) {
         // LinkedIn posts are chronologically reverse. Once we encounter posts older than cutoff, stop pagination.
+        reachedOlderPosts = true;
+      }
+    }
+
+    if (reachedOlderPosts) {
+      break;
+    }
+
+    if (!pageData.cursor || pageData.cursor === cursor) {
+      break;
+    }
+
+    cursor = pageData.cursor;
+    page++;
+  }
+
+  return matchingPosts;
+}
+
+/**
+ * Fetches company posts published within the last week (7 days).
+ * Stops paginating immediately once older posts are encountered.
+ */
+export async function fetchCompanyPostsLastWeek(
+  entityId: string,
+  fallbackSlug?: string,
+  options?: {
+    abortSignal?: AbortSignal;
+    onPageFetched?: (pageNumber: number, count: number) => void;
+  }
+): Promise<CompanyPostItem[]> {
+  const sevenDaysAgo = new Date();
+  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+  const cutoffTimestamp = sevenDaysAgo.getTime();
+
+  const matchingPosts: CompanyPostItem[] = [];
+  let cursor: string | null = null;
+  let page = 1;
+  const maxPages = 4; // 4 pages (~80 posts), plenty for 7 days
+
+  let targetId = entityId;
+
+  while (page <= maxPages) {
+    if (options?.abortSignal?.aborted) {
+      throw new Error("Pipeline aborted by user");
+    }
+
+    let pageData: PostListApiResponse;
+    try {
+      pageData = await fetchCompanyPostsPage(targetId, cursor, 20, options?.abortSignal);
+    } catch (err) {
+      if (fallbackSlug && targetId !== fallbackSlug && page === 1) {
+        console.warn(`[Unipile] Retrying posts page 1 with raw slug "${fallbackSlug}"...`);
+        targetId = fallbackSlug;
+        pageData = await fetchCompanyPostsPage(targetId, cursor, 20, options?.abortSignal);
+      } else {
+        throw err;
+      }
+    }
+
+    const rawItems = pageData.items || [];
+    options?.onPageFetched?.(page, rawItems.length);
+
+    if (rawItems.length === 0) {
+      break;
+    }
+
+    let reachedOlderPosts = false;
+
+    for (const item of rawItems) {
+      let isWithin7Days = false;
+      let postTimestamp: number | null = null;
+
+      const parsedDatetime = (item.parsed_datetime as string) || (item.date_posted as string);
+      const relativeDate = (item.date as string) || "";
+
+      if (parsedDatetime) {
+        const parsedDate = new Date(parsedDatetime);
+        if (!isNaN(parsedDate.getTime())) {
+          postTimestamp = parsedDate.getTime();
+          isWithin7Days = postTimestamp >= cutoffTimestamp;
+        }
+      } else if (relativeDate) {
+        const lower = relativeDate.toLowerCase().trim();
+        // Check for minutes, hours, days, past_day, past_week
+        if (
+          (lower.includes("m") && !lower.includes("mo")) ||
+          lower.includes("h") ||
+          lower === "past_day" ||
+          lower === "past_week"
+        ) {
+          isWithin7Days = true;
+        } else if (lower.includes("d")) {
+          const numDays = parseInt(lower.replace(/\D/g, ""), 10);
+          isWithin7Days = isNaN(numDays) || numDays <= 7;
+        } else if (lower.includes("w")) {
+          const numWeeks = parseInt(lower.replace(/\D/g, ""), 10);
+          isWithin7Days = !isNaN(numWeeks) && numWeeks <= 1;
+        } else {
+          isWithin7Days = false;
+        }
+      }
+
+      if (isWithin7Days) {
+        matchingPosts.push({
+          id: (item.id as string) || undefined,
+          social_id: (item.social_id as string) || (item.id as string) || undefined,
+          share_url: (item.share_url as string) || undefined,
+          text: (item.text as string) || "",
+          date: relativeDate || undefined,
+          parsed_datetime: parsedDatetime || undefined,
+          reaction_counter:
+            typeof item.reaction_counter === "number" ? item.reaction_counter : 0,
+          comment_counter:
+            typeof item.comment_counter === "number" ? item.comment_counter : 0,
+          repost_counter:
+            typeof item.repost_counter === "number" ? item.repost_counter : 0,
+          attachments: Array.isArray(item.attachments) ? item.attachments : [],
+          raw: item,
+        });
+      } else if (postTimestamp && postTimestamp < cutoffTimestamp) {
         reachedOlderPosts = true;
       }
     }

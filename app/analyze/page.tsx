@@ -1,7 +1,7 @@
 import { getSession } from "@/lib/auth";
 import { redirect } from "next/navigation";
 import { AnalyzePipelineView } from "@/components/analyze/AnalyzePipelineView";
-import { Sparkles, ArrowUpRight } from "lucide-react";
+import { Sparkles, ArrowUpRight, Target } from "lucide-react";
 
 export const metadata = {
   title: "Analyze & Lead Signals · Search",
@@ -33,6 +33,13 @@ export default async function AnalyzePage() {
               className="hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors"
             >
               Dashboard
+            </a>
+            <a
+              href="/detect-icp"
+              className="hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors flex items-center gap-1"
+            >
+              <Target className="h-3 w-3 text-blue-500" />
+              Detect ICP
             </a>
             <a
               href="/find"

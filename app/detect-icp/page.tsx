@@ -1,24 +1,24 @@
 import { getSession } from "@/lib/auth";
 import { redirect } from "next/navigation";
-import { getFindFilterOptionsAction } from "@/app/actions/find";
-import { FindExplorer } from "@/components/find/FindExplorer";
-import { Compass, Sparkles, ArrowUpRight, Target } from "lucide-react";
+import { getIcpPresetsAction } from "@/app/actions/detect-icp";
+import { DetectIcpView } from "@/components/detect-icp/DetectIcpView";
+import { Compass, Sparkles, Target } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Find Leads & ICP Profiles · Search",
+  title: "Detect ICP & Match Events · Search",
   description:
-    "Filter and discover targeted B2B sales leads and Ideal Customer Profiles extracted from company activity and commercial signals.",
+    "Input your company offering to automatically derive industry tags, target personas, and match commercial trigger events in your database.",
 };
 
-export default async function FindPage() {
+export default async function DetectIcpPage() {
   const session = await getSession();
 
   if (!session?.userId) {
     redirect("/login");
   }
 
-  const filterOptions = await getFindFilterOptionsAction();
+  const presets = await getIcpPresetsAction();
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex flex-col">
@@ -44,16 +44,16 @@ export default async function FindPage() {
             </Link>
             <Link
               href="/detect-icp"
-              className="hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors flex items-center gap-1"
+              className="text-zinc-900 dark:text-zinc-100 font-semibold transition-colors flex items-center gap-1"
             >
               <Target className="h-3 w-3 text-blue-500" />
               Detect ICP
             </Link>
             <Link
               href="/find"
-              className="text-zinc-900 dark:text-zinc-100 font-semibold transition-colors flex items-center gap-1"
+              className="hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors flex items-center gap-1"
             >
-              <Compass className="h-3 w-3 text-blue-500" />
+              <Compass className="h-3 w-3 text-zinc-400" />
               Find Leads & ICP
             </Link>
             <Link
@@ -81,37 +81,7 @@ export default async function FindPage() {
 
       {/* Main Container */}
       <main className="flex-1 mx-auto w-full max-w-7xl px-6 py-8">
-        {/* Page Header */}
-        <div className="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div className="space-y-1">
-            <div className="flex items-center gap-2.5">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-white shadow-xs">
-                <Compass className="h-4 w-4" />
-              </div>
-              <h1 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
-                Find Leads & Ideal Customer Profiles
-              </h1>
-            </div>
-            <p className="text-xs text-zinc-500 dark:text-zinc-400 pl-10.5 max-w-2xl">
-              Filter commercial opportunities and ICP personas detected from company
-              announcements, partnerships, and hiring activity. Select between Leads
-              and ICPs using the dropdown selector below.
-            </p>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <Link
-              href="/analyze"
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-800 text-xs font-medium text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition"
-            >
-              Pipeline Analysis
-              <ArrowUpRight className="h-3.5 w-3.5 text-zinc-400" />
-            </Link>
-          </div>
-        </div>
-
-        {/* Interactive Discovery Explorer */}
-        <FindExplorer initialOptions={filterOptions} />
+        <DetectIcpView presets={presets} />
       </main>
     </div>
   );
